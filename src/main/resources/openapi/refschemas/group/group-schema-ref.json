@@ -1,0 +1,259 @@
+{
+  "Group": {
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "providerInfo": {
+            "$ref": "../common/common-schema-ref.json#/ProviderInfo"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "addressInfo": {
+            "$ref": "../common/common-schema-ref.json#/AddressInfo"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "contactInfo": {
+            "$ref": "../common/common-schema-ref.json#/ContactInfo"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "logisticInfo": {
+            "type": "object",
+            "properties": {
+              "locationHours": {
+                "$ref": "../common/common-schema-ref.json#/LocationHours"
+              },
+              "logistics": {
+                "$ref": "../common/common-schema-ref.json#/Logistics"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "affiliationInfo": {
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "../common/common-schema-ref.json#/AffiliationsRoster"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "affiliations": {
+                    "type": "array",
+                    "description": "A list of affiliations for the practitioner.",
+                    "items": {
+                      "$ref": "../common/common-schema-ref.json#/GroupAndFacilityAffiliationsTable"
+                    }
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "notApplicable": {
+                    "enum": [
+                      true
+                    ],
+                    "description": "Affiliations not applicable."
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "adverseActionInfo": {
+            "properties": {
+              "commonActions": {
+                "$ref": "../common/common-schema-ref.json#/AdverseActions"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "finesAndDebtsInfo": {
+            "$ref": "../common/common-schema-ref.json#/FinesAndDebts"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "significantTransactionInfo": {
+            "$ref": "../common/common-schema-ref.json#/SignificantTransactions"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "subcontractorInfo": {
+            "$ref": "../common/common-schema-ref.json#/Subcontractors"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "taxonomyInfo": {
+            "$ref": "#/GroupTaxonomy"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "stateLicenses": {
+            "$ref": "../common/common-schema-ref.json#/StateLicenses"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "additionalCertifications": {
+            "$ref": "#/GroupAdditionalCertifications"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "supportingInfo": {
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "addenda/group-pt89-schema-ref.json#/GroupPT89"
+              },
+              {
+                "$ref": "addenda/group-pt14-schema-ref.json#/GroupPT14"
+              },
+              {
+                "$ref": "addenda/group-pt20-schema-ref.json#/GroupPT20"
+              },
+              {
+                "$ref": "addenda/group-pt80-schema-ref.json#/GroupPT80"
+              },
+              {
+                "$ref": "addenda/group-ptdl-schema-ref.json#/GroupPTDL"
+              },
+              {
+                "$ref": "addenda/group-pt23-schema-ref.json#/GroupPT23"
+              },
+              {
+                "$ref": "addenda/group-pt22-schema-ref.json#/GroupPT22"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  },
+  "GroupAdditionalCertifications": {
+    "type": "object",
+    "properties": {
+      "labServicesInfo": {
+        "$ref": "#/GroupLabServicesInfo"
+      },
+      "DEAInfo": {
+        "$ref": "../common/common-schema-ref.json#/DEAInfo"
+      }
+    },
+    "additionalProperties": false
+  },
+  "GroupLabServicesInfo": {
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "willBillForLabServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "willBillForLabServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "CLIAInfo": {
+            "$ref": "../common/common-schema-ref.json#/CLIAInfo"
+          },
+          "labPermitInfo": {
+            "$ref": "../common/common-schema-ref.json#/LabPermitInfo"
+          },
+          "providesPathologyOrPulmonaryLabs": {
+            "type": "boolean",
+            "description": "Indicates if Pathology and/or Pulmonary labs are provided at this location."
+          },
+          "providesHospitalTechnicalComponent": {
+            "type": "boolean",
+            "description": "Indicates if Hospital Technical components are provided at this location for lab testing."
+          },
+          "locatedOnHospitalGrounds": {
+            "type": "boolean",
+            "description": "Indicates if the provider is located on the hospital grounds."
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  },
+  "GroupTaxonomy": {
+    "type": "object",
+    "properties": {
+      "taxonomyAndSpeciality": {
+        "$ref": "../common/common-schema-ref.json#/TaxonomyAndSpeciality"
+      }
+    },
+    "additionalProperties": false
+  }
+}

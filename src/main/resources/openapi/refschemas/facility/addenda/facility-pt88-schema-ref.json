@@ -1,0 +1,12 @@
+{
+  "FacilityPT88": {
+    "title": "Residential Treatment Center (RTC)",
+    "type": "object",
+    "properties": {
+      "accreditationDocument": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      }
+    },
+    "additionalProperties": false
+  }
+}

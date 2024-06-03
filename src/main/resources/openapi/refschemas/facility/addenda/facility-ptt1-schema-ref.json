@@ -1,0 +1,49 @@
+{
+  "FacilityPTT1": {
+    "title": "Ambulance Company",
+    "type": "object",
+    "properties": {
+      "selectedServices": {
+        "type": "array",
+        "items": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "hasService": {
+                  "type": "boolean",
+                  "enum": [
+                    true
+                  ]
+                },
+                "name": {
+                  "type": "string"
+                },
+                "attachment": {
+                  "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                }
+              },
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "hasService": {
+                  "type": "boolean",
+                  "enum": [
+                    false
+                  ]
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          ]
+        }
+      }
+    },
+    "additionalProperties": false
+  }
+}

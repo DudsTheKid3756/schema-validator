@@ -1,0 +1,76 @@
+{
+  "FacilityPTHV": {
+    "title": "Evidence-based Home Visiting Model Certification",
+    "type": "object",
+    "properties": {
+      "visitingModel": {
+        "type": "object",
+        "properties": {
+          "services": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "hasService": {
+                      "type": "boolean",
+                      "enum": [
+                        true
+                      ]
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "attachments": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "hasService": {
+                      "type": "boolean",
+                      "enum": [
+                        false
+                      ]
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "checkAllThatApply": {
+        "type": "object",
+        "properties": {
+          "employedHomeVisitorsCompliance": {
+            "type": "boolean"
+          },
+          "maintainsARoster": {
+            "type": "boolean"
+          },
+          "recordsIncludeAttestationFromHFAOrNFP": {
+            "type": "boolean"
+          },
+          "understandsAllOwnersRequirements": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "additionalProperties": false
+  }
+}

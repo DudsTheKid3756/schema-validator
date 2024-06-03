@@ -1,0 +1,20 @@
+{
+  "ProfessionalDetail": {
+    "type": "object",
+    "properties": {
+      "firstName": {
+        "type": "string"
+      },
+      "lastName": {
+        "type": "string"
+      },
+      "attachProfessionalLicense": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "attachPreEmploymentCriminalHistory": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      }
+    },
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "FacilityPTMC": {
+    "title": "Outpatient Mental Health Clinic",
+    "type": "object",
+    "properties": {
+      "chairOfBoardDetails": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+        }
+      },
+      "multidisciplinaryTeamDetails": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+        }
+      },
+      "otherProfessionalsDetails": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+        }
+      },
+      "criminalHistoryPolicy": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "onSiteMedicalDirector": {
+        "type": "boolean"
+      }
+    },
+    "additionalProperties": false
+  }
+}

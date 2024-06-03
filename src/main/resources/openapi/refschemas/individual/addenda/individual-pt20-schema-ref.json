@@ -1,0 +1,100 @@
+{
+  "IndividualPT20": {
+    "title": "Physician (Individual)",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "providesHealthyStepsServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "If the physician offers Healthy Steps services."
+          },
+          "providesCenteringPregnancyServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "if the physician offers Centering Pregnancy services."
+          },
+          "healthyStepsApprovalLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "centeringPregnancyCareApprovalLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "providesHealthyStepsServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "If the physician offers Healthy Steps services."
+          },
+          "providesCenteringPregnancyServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "if the physician offers Centering Pregnancy services."
+          },
+          "centeringPregnancyCareApprovalLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "providesHealthyStepsServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "If the physician offers Healthy Steps services."
+          },
+          "providesCenteringPregnancyServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "if the physician offers Centering Pregnancy services."
+          },
+          "healthyStepsApprovalLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "providesHealthyStepsServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "If the physician offers Healthy Steps services."
+          },
+          "providesCenteringPregnancyServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "if the physician offers Centering Pregnancy services."
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

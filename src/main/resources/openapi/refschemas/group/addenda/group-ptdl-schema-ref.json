@@ -1,0 +1,17 @@
+{
+  "GroupPTDL": {
+    "title": "Doula (Group)",
+    "type": "object",
+    "properties": {
+      "liabilityInsuranceAttestation": {
+        "type": "boolean",
+        "description": "Attestation of adequate liability insurance for each Doula."
+      },
+      "fingerprintBackgroundCheckAttestation": {
+        "type": "boolean",
+        "description": "Attestation that all Doula providers have passed a Fingerprint Criminal Background Check (FCBC)."
+      }
+    },
+    "additionalProperties": false
+  }
+}

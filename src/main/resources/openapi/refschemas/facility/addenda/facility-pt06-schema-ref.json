@@ -1,0 +1,144 @@
+{
+  "FacilityPT06": {
+    "title": "Special Other Acute Hospital",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "The facility will be rendering x-ray services or other radiology services."
+          },
+          "radiationMachineRegistrationCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "includesTraumaCenter": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Indicates that there is a Trauma Center at the facility."
+          },
+          "traumaCenterCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "medicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willBillForPediatricInpatientServices": {
+            "type": "boolean",
+            "description": "Indicates if the facility will bill for Pediatric Inpatient services."
+          },
+          "willBillForPsychiatricInpatientServices": {
+            "type": "boolean",
+            "description": "Indicates if the facility will bill for Psychiatric Inpatient services."
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "The facility will be rendering x-ray services or other radiology services."
+          },
+          "radiationMachineRegistrationCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "includesTraumaCenter": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Indicates that there is no Trauma Center at the facility."
+          },
+          "medicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willBillForPediatricInpatientServices": {
+            "type": "boolean",
+            "description": "Indicates if the facility will bill for Pediatric Inpatient services."
+          },
+          "willBillForPsychiatricInpatientServices": {
+            "type": "boolean",
+            "description": "Indicates if the facility will bill for Psychiatric Inpatient services."
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "The facility will not be rendering x-ray services or other radiology services."
+          },
+          "includesTraumaCenter": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Indicates that there is a Trauma Center at the facility."
+          },
+          "traumaCenterCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "medicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willBillForPediatricInpatientServices": {
+            "type": "boolean",
+            "description": "Indicates if the facility will bill for Pediatric Inpatient services."
+          },
+          "willBillForPsychiatricInpatientServices": {
+            "type": "boolean",
+            "description": "Indicates if the facility will bill for Psychiatric Inpatient services."
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "The facility will not be rendering x-ray services or other radiology services."
+          },
+          "includesTraumaCenter": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Indicates that there is no Trauma Center at the facility."
+          },
+          "medicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willBillForPediatricInpatientServices": {
+            "type": "boolean",
+            "description": "Indicates if the facility will bill for Pediatric Inpatient services."
+          },
+          "willBillForPsychiatricInpatientServices": {
+            "type": "boolean",
+            "description": "Indicates if the facility will bill for Psychiatric Inpatient services."
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

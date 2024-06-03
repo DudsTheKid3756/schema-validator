@@ -1,0 +1,50 @@
+{
+  "GroupPT14": {
+    "title": "Dental (Group)",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "dentalPracticeWithinFQHC": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "FQHCNPI": {
+            "$ref": "../../common/common-pattern-ref.json#/ProviderNPI"
+          },
+          "FQHCName": {
+            "type": "string"
+          },
+          "FQHCNumber": {
+            "type": "string",
+            "pattern": "^[0-9]{10}$",
+            "description": "The Medical Assistance number for the FQHC, which should be 10 digits."
+          },
+          "mobileDentalProvider": {
+            "type": "boolean"
+
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "dentalPracticeWithinFQHC": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "mobileDentalProvider": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

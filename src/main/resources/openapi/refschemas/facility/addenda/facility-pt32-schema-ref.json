@@ -1,0 +1,90 @@
+{
+  "FacilityPT32": {
+    "type": "object",
+    "title": "Outpatient Mental Health Clinic",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "providingPeerRecoverySupportServices": {
+            "enum": [
+              false
+            ]
+          },
+          "peerRecoverySupportServicesAttestation": {
+            "type": "boolean"
+          },
+          "contractForDrugTesting": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "medicalDirector": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "otherProfessionals": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "criminalHistoryPolicy": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "providingPeerRecoverySupportServices": {
+            "enum": [
+              true
+            ]
+          },
+          "certifiedPeerRecoverySpecialist": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "registeredPeerSupervisor": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "peerRecoverySupportServicesAttestation": {
+            "type": "boolean"
+          },
+          "contractForDrugTesting": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "medicalDirector": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "otherProfessionals": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "criminalHistoryPolicy": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

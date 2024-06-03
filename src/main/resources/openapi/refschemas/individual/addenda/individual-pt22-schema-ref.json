@@ -1,0 +1,37 @@
+{
+  "IndividualPT22": {
+    "title": "Nurse Midwives (Individual)",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "providesCenteringPregnancyServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "The provider offer services for Centering Pregnancy"
+          },
+          "centeringPregnancyCareApprovalLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "providesCenteringPregnancyServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "The provider does not offer services for Centering Pregnancy."
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

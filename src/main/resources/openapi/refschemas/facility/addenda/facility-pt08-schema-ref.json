@@ -1,0 +1,69 @@
+{
+  "FacilityPT08": {
+    "title": "Urgent Care Centers",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Indicates that x-ray or other radiology services will be rendered."
+          },
+          "radiationMachineRegistrationCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "patientsSeenWithoutAppointment": {
+            "type": "boolean",
+            "description": "Indicates if patients are seen without an appointment during all hours of operation."
+          },
+          "supervisingPhysicianDuringAllHours": {
+            "type": "boolean",
+            "description": "Indicates if there is a supervising physician during all hours of operation."
+          },
+          "supervisingPhysicianAvailableForConsultation": {
+            "type": "boolean",
+            "description": "Indicates if a supervising physician is available for consultation either in-person or via telehealth during operation hours."
+          },
+          "qualifiedPractitionerPresent": {
+            "type": "boolean",
+            "description": "Indicates if there is at least one qualified physician, certified nurse practitioner, or physician assistant present during hours of operation."
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Indicates that x-ray or other radiology services will not be rendered."
+          },
+          "patientsSeenWithoutAppointment": {
+            "type": "boolean",
+            "description": "Indicates if patients are seen without an appointment during all hours of operation."
+          },
+          "supervisingPhysicianDuringAllHours": {
+            "type": "boolean",
+            "description": "Indicates if there is a supervising physician during all hours of operation."
+          },
+          "supervisingPhysicianAvailableForConsultation": {
+            "type": "boolean",
+            "description": "Indicates if a supervising physician is available for consultation either in-person or via telehealth during operation hours."
+          },
+          "qualifiedPractitionerPresent": {
+            "type": "boolean",
+            "description": "Indicates if there is at least one qualified physician, certified nurse practitioner, or physician assistant present during hours of operation."
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

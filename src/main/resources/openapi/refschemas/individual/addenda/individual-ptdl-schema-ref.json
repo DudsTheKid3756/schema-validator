@@ -1,0 +1,65 @@
+{
+  "IndividualPTDL": {
+    "title": "Doula (Individual)",
+    "type": "object",
+    "properties": {
+      "certificationOrganization": {
+        "type": "string",
+        "enum": [
+          "Doulas of North America (DONA)",
+          "Ancient Song Doula Services",
+          "Childbirth International (CBI)",
+          "The Childbirth and Postpartum Professional Association (CAPPA)",
+          "Doula Trainings International",
+          "Black Doula Training",
+          "International Childbirth Education Association (ICEA)",
+          "Mamatoto Village",
+          "MaternityWise"
+        ]
+      },
+      "certifications": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "attachment": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "certificationName": {
+              "type": "string"
+            },
+            "certificateNumber": {
+              "type": "string"
+            },
+            "issuanceDate": {
+              "$ref": "../../common/common-pattern-ref.json#/Date"
+            },
+            "expirationDate": {
+              "$ref": "../../common/common-pattern-ref.json#/Date"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "attestation": {
+        "type": "object",
+        "properties": {
+          "notifyMDH": {
+            "type": "boolean"
+          },
+          "liabilityInsurance": {
+            "type": "boolean"
+          },
+          "fingerprintBackgroundCheck": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,435 @@
+{
+  "FacilityPT01": {
+    "title": "Acute Hospitals",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "JCAHOorDNVCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "object",
+            "properties": {
+              "renderXRayOrRadiologyServices": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "radiationMachineRegistrationCertification": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          },
+          "traumaCenter": {
+            "type": "object",
+            "properties": {
+              "includesTraumaCenter": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ],
+                "description": "Indicates that there is a Trauma Center at the facility."
+              },
+              "traumaCenterCertificationIssued": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          },
+          "isFreestandingMedicalFacility": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "freestandingMedicalFacility": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "attachment": {
+                  "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "hostStateMedicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "JCAHOorDNVCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "object",
+            "properties": {
+              "renderXRayOrRadiologyServices": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "traumaCenter": {
+            "type": "object",
+            "properties": {
+              "includesTraumaCenter": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "isFreestandingMedicalFacility": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "hostStateMedicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "JCAHOorDNVCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "object",
+            "properties": {
+              "renderXRayOrRadiologyServices": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "traumaCenter": {
+            "type": "object",
+            "properties": {
+              "includesTraumaCenter": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ],
+                "description": "Indicates that there is a Trauma Center at the facility."
+              },
+              "traumaCenterCertificationIssued": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          },
+          "isFreestandingMedicalFacility": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "freestandingMedicalFacility": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "attachment": {
+                  "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "hostStateMedicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "JCAHOorDNVCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "object",
+            "properties": {
+              "renderXRayOrRadiologyServices": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "radiationMachineRegistrationCertification": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          },
+          "traumaCenter": {
+            "type": "object",
+            "properties": {
+              "includesTraumaCenter": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ],
+                "description": "Indicates that there is a Trauma Center at the facility."
+              }
+            },
+            "additionalProperties": false
+          },
+          "isFreestandingMedicalFacility": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "freestandingMedicalFacility": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "attachment": {
+                  "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "hostStateMedicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "JCAHOorDNVCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "object",
+            "properties": {
+              "renderXRayOrRadiologyServices": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "traumaCenter": {
+            "type": "object",
+            "properties": {
+              "includesTraumaCenter": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ],
+                "description": "Indicates that there is a Trauma Center at the facility."
+              }
+            },
+            "additionalProperties": false
+          },
+          "isFreestandingMedicalFacility": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "freestandingMedicalFacility": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "attachment": {
+                  "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "hostStateMedicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "JCAHOorDNVCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "object",
+            "properties": {
+              "renderXRayOrRadiologyServices": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "traumaCenter": {
+            "type": "object",
+            "properties": {
+              "includesTraumaCenter": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ],
+                "description": "Indicates that there is a Trauma Center at the facility."
+              },
+              "traumaCenterCertificationIssued": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          },
+          "isFreestandingMedicalFacility": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "hostStateMedicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "JCAHOorDNVCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "object",
+            "properties": {
+              "renderXRayOrRadiologyServices": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "radiationMachineRegistrationCertification": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          },
+          "traumaCenter": {
+            "type": "object",
+            "properties": {
+              "includesTraumaCenter": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ],
+                "description": "Indicates that there is a Trauma Center at the facility."
+              },
+              "traumaCenterCertificationIssued": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          },
+          "isFreestandingMedicalFacility": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "hostStateMedicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "JCAHOorDNVCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "object",
+            "properties": {
+              "renderXRayOrRadiologyServices": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "radiationMachineRegistrationCertification": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          },
+          "traumaCenter": {
+            "type": "object",
+            "properties": {
+              "includesTraumaCenter": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ],
+                "description": "Indicates that there is a Trauma Center at the facility."
+              }
+            },
+            "additionalProperties": false
+          },
+          "isFreestandingMedicalFacility": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "hostStateMedicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

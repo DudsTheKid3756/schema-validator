@@ -1,0 +1,124 @@
+{
+  "FacilityPT05": {
+    "title": "Chronic Hospital",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "NIAHOCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "physicalRehabilitationServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Indicates that the facility will be rendering physical rehabilitation services."
+          },
+          "CARFCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "The facility will be rendering x-ray services or other radiology services."
+          },
+          "radiationMachineRegistrationCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "medicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "NIAHOCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "physicalRehabilitationServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Indicates that the facility will not be rendering physical rehabilitation services."
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "The facility will not be rendering x-ray services or other radiology services."
+          },
+          "medicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "NIAHOCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "physicalRehabilitationServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Indicates that the facility will be rendering physical rehabilitation services."
+          },
+          "CARFCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "The facility will not be rendering x-ray services or other radiology services."
+          },
+          "medicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "NIAHOCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "physicalRehabilitationServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Indicates that the facility will not be rendering physical rehabilitation services."
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "The facility will be rendering x-ray services or other radiology services."
+          },
+          "radiationMachineRegistrationCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "medicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

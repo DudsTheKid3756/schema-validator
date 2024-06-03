@@ -1,0 +1,397 @@
+{
+  "Facility": {
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "providerInfo": {
+            "$ref": "../common/common-schema-ref.json#/ProviderInfo"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "addressInfo": {
+            "$ref": "../common/common-schema-ref.json#/AddressInfo"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "contactInfo": {
+            "$ref": "../common/common-schema-ref.json#/ContactInfo"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "logisticInfo": {
+            "type": "object",
+            "properties": {
+              "locationHours": {
+                "$ref": "../common/common-schema-ref.json#/LocationHours"
+              },
+              "logistics": {
+                "$ref": "../common/common-schema-ref.json#/Logistics"
+              },
+              "isAssistedLivingFacility": {
+                "type": "boolean",
+                "description": "Indicates if a given provider type is an assisted living facility"
+              },
+              "inpatientBedCount": {
+                "type": "integer",
+                "description": "The number of beds at the facility.",
+                "pattern": "(^[0-9]*$)|(^$)"
+              },
+              "specialityBedCount": {
+                "type": "integer",
+                "description": "The number of beds at the facility based on the provider type.",
+                "pattern": "(^[0-9]*$)|(^$)"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "affiliationInfo": {
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "../common/common-schema-ref.json#/AffiliationsRoster"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "affiliations": {
+                    "type": "array",
+                    "description": "A list of affiliations for the practitioner.",
+                    "items": {
+                      "$ref": "../common/common-schema-ref.json#/GroupAndFacilityAffiliationsTable"
+                    }
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "notApplicable": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ],
+                    "description": "Affiliations not applicable."
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "adverseActionInfo": {
+            "properties": {
+              "commonActions": {
+                "$ref": "../common/common-schema-ref.json#/AdverseActions"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "finesAndDebtsInfo": {
+            "$ref": "../common/common-schema-ref.json#/FinesAndDebts"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "significantTransactionInfo": {
+            "$ref": "../common/common-schema-ref.json#/SignificantTransactions"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "subcontractorInfo": {
+            "$ref": "../common/common-schema-ref.json#/Subcontractors"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "supportingInfo": {
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "addenda/facility-pt91-schema-ref.json#/FacilityPT91"
+              },
+              {
+                "$ref": "addenda/facility-pt01-schema-ref.json#/FacilityPT01"
+              },
+              {
+                "$ref": "addenda/facility-pt41-schema-ref.json#/FacilityPT41"
+              },
+              {
+                "$ref": "addenda/facility-ptmc-schema-ref.json#/FacilityPTMC"
+              },
+              {
+                "$ref": "addenda/facility-pt59-schema-ref.json#/FacilityPT59"
+              },
+              {
+                "$ref": "addenda/facility-pt03-04-schema-ref.json#/FacilityPT03"
+              },
+              {
+                "$ref": "addenda/facility-pt05-schema-ref.json#/FacilityPT05"
+              },
+              {
+                "$ref": "addenda/facility-pt06-schema-ref.json#/FacilityPT06"
+              },
+              {
+                "$ref": "addenda/facility-pt07-schema-ref.json#/FacilityPT07"
+              },
+              {
+                "$ref": "addenda/facility-pt08-schema-ref.json#/FacilityPT08"
+              },
+              {
+                "$ref": "addenda/facility-pt60-schema-ref.json#/FacilityPT60"
+              },
+              {
+                "$ref": "addenda/facility-ptmh-schema-ref.json#/FacilityPTMH"
+              },
+              {
+                "$ref": "addenda/facility-ptmt-schema-ref.json#/FacilityPTMT"
+              },
+              {
+                "$ref": "addenda/facility-ptse-schema-ref.json#/FacilityPTSE"
+              },
+              {
+                "$ref": "addenda/facility-ptvc-schema-ref.json#/FacilityPTVC"
+              },
+              {
+                "$ref": "addenda/facility-pt55-schema-ref.json#/FacilityPT55"
+              },
+              {
+                "$ref": "addenda/facility-pt76-alf-schema-ref.json#/FacilityPT76-A"
+              },
+              {
+                "$ref": "addenda/facility-pt61-schema-ref.json#/FacilityPT61"
+              },
+              {
+                "$ref": "addenda/facility-pt62-schema-ref.json#/FacilityPT62"
+              },
+              {
+                "$ref": "addenda/facility-ptcm-schema-ref.json#/FacilityPTCM"
+              },
+              {
+                "$ref": "addenda/facility-ptt1-schema-ref.json#/FacilityPTT1"
+              },
+              {
+                "$ref": "addenda/facility-pt35-schema-ref.json#/FacilityPT35"
+              },
+              {
+                "$ref": "addenda/facility-pt36-schema-ref.json#/FacilityPT36"
+              },
+              {
+                "$ref": "addenda/facility-pt39-schema-ref.json#/FacilityPT39"
+              },
+              {
+                "$ref": "addenda/facility-pt57-schema-ref.json#/FacilityPT57"
+              },
+              {
+                "$ref": "addenda/facility-pt88-schema-ref.json#/FacilityPT88"
+              },
+              {
+                "$ref": "addenda/facility-pt89-schema-ref.json#/FacilityPT89"
+              },
+              {
+                "$ref": "addenda/facility-ptvp-schema-ref.json#/FacilityPTVP"
+              },
+              {
+                "$ref": "addenda/facility-pthv-schema-ref.json#/FacilityPTHV"
+              },
+              {
+                "$ref": "addenda/facility-pt90-schema-ref.json#/FacilityPT90"
+              },
+              {
+                "$ref": "addenda/facility-pt32-schema-ref.json#/FacilityPT32"
+              },
+              {
+                "$ref": "addenda/facility-pt81-schema-ref.json#/FacilityPT81-M"
+              },
+              {
+                "$ref": "addenda/facility-pt34-schema-ref.json#/FacilityPT34"
+              },
+              {
+                "$ref": "addenda/facility-pt38-schema-ref.json#/FacilityPT38"
+              },
+              {
+                "$ref": "addenda/facility-pt42-schema-ref.json#/FacilityPT42"
+              },
+              {
+                "$ref": "addenda/facility-pt51-schema-ref.json#/FacilityPT51"
+              },
+              {
+                "$ref": "addenda/facility-pt50-schema-ref.json#/FacilityPT50"
+              },
+              {
+                "$ref": "addenda/facility-pt86-schema-ref.json#/FacilityPT86"
+              },
+              {
+                "$ref": "addenda/facility-ptdp-schema-ref.json#/FacilityPTDP"
+              },
+              {
+                "$ref": "addenda/facility-pt40-schema-ref.json#/FacilityPT40"
+              },
+              {
+                "$ref": "addenda/facility-pt54-schema-ref.json#/FacilityPT54"
+              },
+              {
+                "$ref": "addenda/facility-ptpr-schema-ref.json#/FacilityPTPR"
+              },
+              {
+                "$ref": "addenda/facility-pt76-other-schema-ref.json#/FacilityPT76-O"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "stateLicenses": {
+            "$ref": "../common/common-schema-ref.json#/StateLicenses"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "taxonomyInfo": {
+            "$ref": "#/FacilityTaxonomy"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "additionalCertifications": {
+            "$ref": "#/FacilityAdditionalCertifications"
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  },
+  "FacilityLabServicesInfo": {
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "willBillForLabServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "willBillForLabServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "CLIAInfo": {
+            "$ref": "../common/common-schema-ref.json#/CLIAInfo"
+          },
+          "labPermitInfo": {
+            "$ref": "../common/common-schema-ref.json#/LabPermitInfo"
+          },
+          "provideServicesForOwnPatients": {
+            "type": "boolean",
+            "description": "Does the entity provide medical laboratory services for their own patients?"
+          },
+          "provideServicesForOtherPatients": {
+            "type": "boolean",
+            "description": "Does the entity provide medical laboratory services for patients other than their own?"
+          },
+          "receiveSpecimensFromOtherSitesInMaryland": {
+            "type": "boolean",
+            "description": "Does the entity receive specimens that are obtained from other sites located in Maryland?"
+          },
+          "providesPathologyOrPulmonaryLabs": {
+            "type": "boolean",
+            "description": "Indicates if Pathology and/or Pulmonary labs are provided at this location."
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  },
+  "FacilityAdditionalCertifications": {
+    "type": "object",
+    "properties": {
+      "labServicesInfo": {
+        "$ref": "#/FacilityLabServicesInfo"
+      },
+      "DEAInfo": {
+        "$ref": "../common/common-schema-ref.json#/DEAInfo"
+      },
+      "NCPDPInfo": {
+        "$ref": "../common/common-schema-ref.json#/NCPDPInfo"
+      }
+    },
+    "additionalProperties": false
+  },
+  "FacilityTaxonomy": {
+    "type": "object",
+    "properties": {
+      "taxonomyAndSpeciality": {
+        "$ref": "../common/common-schema-ref.json#/TaxonomyAndSpeciality"
+      },
+      "facilityType": {
+        "type": "string",
+        "description": "Type of the healthcare facility.",
+        "enum": [
+          "UNIT",
+          "HOSPITAL"
+        ]
+      }
+    },
+    "additionalProperties": false
+  }
+}

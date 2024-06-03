@@ -1,0 +1,15 @@
+{
+  "FacilityPT41": {
+    "title": "Home Health Agencies",
+    "type": "object",
+    "properties": {
+      "CMSMedicareApprovalLetter": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "certificateOfNeed": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      }
+    },
+    "additionalProperties": false
+  }
+}

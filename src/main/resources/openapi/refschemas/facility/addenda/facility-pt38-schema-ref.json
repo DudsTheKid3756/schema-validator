@@ -1,0 +1,445 @@
+{
+  "FacilityPT38": {
+    "title": "General Clinic",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "The facility will be rendering x-ray services or other radiology services."
+          },
+          "radiationMachineRegistrationCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "clinicPolicyProcedures": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "isPainManagementClinic": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Provided location performs Toxicology Tests."
+          },
+          "physicianCredentials": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "SBHCSponsoringAgency": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "SBHCSponsoringAgencyInfo": {
+            "type": "object",
+            "properties": {
+              "billingProviderNPI": {
+                "$ref": "../../common/common-pattern-ref.json#/ProviderNPI"
+              },
+              "billingProviderTaxID": {
+                "$ref": "../../common/common-pattern-ref.json#/TaxIdNumber"
+              },
+              "billingProviderMA": {
+                "$ref": "../../common/common-pattern-ref.json#/MANumber"
+              },
+              "SBHCName": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9 @#&,.\\-'/]+$",
+                "description": "Name of the SBHC."
+              },
+              "streetAddressLine1": {
+                "$ref": "../../common/common-pattern-ref.json#/PrimaryStreetAddress"
+              },
+              "streetAddressLine2": {
+                "$ref": "../../common/common-pattern-ref.json#/SecondaryStreetAddress"
+              },
+              "city": {
+                "$ref": "../../common/common-pattern-ref.json#/City"
+              },
+              "state": {
+                "$ref": "../../common/common-pattern-ref.json#/StateCode"
+              },
+              "zipCode": {
+                "$ref": "../../common/common-pattern-ref.json#/ZipCode"
+              },
+              "locationChange": {
+                "type": "boolean",
+                "description": "Select if this is a location change for an existing SBHC."
+              },
+              "SBHCApprovalDocument": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "The facility will be rendering x-ray services or other radiology services."
+          },
+          "radiationMachineRegistrationCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "clinicPolicyProcedures": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "isPainManagementClinic": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Provided location performs Toxicology Tests."
+          },
+          "physicianCredentials": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "SBHCSponsoringAgency": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "The facility will be rendering x-ray services or other radiology services."
+          },
+          "radiationMachineRegistrationCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "clinicPolicyProcedures": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "isPainManagementClinic": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Provided location doesn't perform Toxicology Tests."
+          },
+          "SBHCSponsoringAgency": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Indicates that the facility is a sponsoring agency for an MSDE approved School Based Health Center (SBHC)."
+          },
+          "SBHCSponsoringAgencyInfo": {
+            "type": "object",
+            "properties": {
+              "billingProviderNPI": {
+                "$ref": "../../common/common-pattern-ref.json#/ProviderNPI"
+              },
+              "billingProviderTaxID": {
+                "$ref": "../../common/common-pattern-ref.json#/TaxIdNumber"
+              },
+              "billingProviderMA": {
+                "$ref": "../../common/common-pattern-ref.json#/MANumber"
+              },
+              "SBHCName": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9 @#&,.\\-'/]+$",
+                "description": "Name of the SBHC."
+              },
+              "streetAddressLine1": {
+                "$ref": "../../common/common-pattern-ref.json#/PrimaryStreetAddress"
+              },
+              "streetAddressLine2": {
+                "$ref": "../../common/common-pattern-ref.json#/SecondaryStreetAddress"
+              },
+              "city": {
+                "$ref": "../../common/common-pattern-ref.json#/City"
+              },
+              "state": {
+                "$ref": "../../common/common-pattern-ref.json#/StateCode"
+              },
+              "zipCode": {
+                "$ref": "../../common/common-pattern-ref.json#/ZipCode"
+              },
+              "locationChange": {
+                "type": "boolean",
+                "description": "Select if this is a location change for an existing SBHC."
+              },
+              "SBHCApprovalDocument": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "The facility will be rendering x-ray services or other radiology services."
+          },
+          "radiationMachineRegistrationCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "clinicPolicyProcedures": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "isPainManagementClinic": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Provided location performs Toxicology Tests."
+          },
+          "SBHCSponsoringAgency": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "The facility will not be rendering x-ray services or other radiology services."
+          },
+          "clinicPolicyProcedures": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "isPainManagementClinic": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Provided location doesn't perform Toxicology Tests."
+          },
+          "SBHCSponsoringAgency": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "The facility will be rendering x-ray services or other radiology services."
+          },
+          "clinicPolicyProcedures": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "isPainManagementClinic": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Provided location performs Toxicology Tests."
+          },
+          "physicianCredentials": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "SBHCSponsoringAgency": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "SBHCSponsoringAgencyInfo": {
+            "type": "object",
+            "properties": {
+              "billingProviderNPI": {
+                "$ref": "../../common/common-pattern-ref.json#/ProviderNPI"
+              },
+              "billingProviderTaxID": {
+                "$ref": "../../common/common-pattern-ref.json#/TaxIdNumber"
+              },
+              "billingProviderMA": {
+                "$ref": "../../common/common-pattern-ref.json#/MANumber"
+              },
+              "SBHCName": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9 @#&,.\\-'/]+$",
+                "description": "Name of the SBHC."
+              },
+              "streetAddressLine1": {
+                "$ref": "../../common/common-pattern-ref.json#/PrimaryStreetAddress"
+              },
+              "streetAddressLine2": {
+                "$ref": "../../common/common-pattern-ref.json#/SecondaryStreetAddress"
+              },
+              "city": {
+                "$ref": "../../common/common-pattern-ref.json#/City"
+              },
+              "state": {
+                "$ref": "../../common/common-pattern-ref.json#/StateCode"
+              },
+              "zipCode": {
+                "$ref": "../../common/common-pattern-ref.json#/ZipCode"
+              },
+              "locationChange": {
+                "type": "boolean",
+                "description": "Select if this is a location change for an existing SBHC."
+              },
+              "SBHCApprovalDocument": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "The facility will not be rendering x-ray services or other radiology services."
+          },
+          "clinicPolicyProcedures": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "isPainManagementClinic": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Provided location doesn't perform Toxicology Tests."
+          },
+          "SBHCSponsoringAgency": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "SBHCSponsoringAgencyInfo": {
+            "type": "object",
+            "properties": {
+              "billingProviderNPI": {
+                "$ref": "../../common/common-pattern-ref.json#/ProviderNPI"
+              },
+              "billingProviderTaxID": {
+                "$ref": "../../common/common-pattern-ref.json#/TaxIdNumber"
+              },
+              "billingProviderMA": {
+                "$ref": "../../common/common-pattern-ref.json#/MANumber"
+              },
+              "SBHCName": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9 @#&,.\\-'/]+$",
+                "description": "Name of the SBHC."
+              },
+              "streetAddressLine1": {
+                "$ref": "../../common/common-pattern-ref.json#/PrimaryStreetAddress"
+              },
+              "streetAddressLine2": {
+                "$ref": "../../common/common-pattern-ref.json#/SecondaryStreetAddress"
+              },
+              "city": {
+                "$ref": "../../common/common-pattern-ref.json#/City"
+              },
+              "state": {
+                "$ref": "../../common/common-pattern-ref.json#/StateCode"
+              },
+              "zipCode": {
+                "$ref": "../../common/common-pattern-ref.json#/ZipCode"
+              },
+              "locationChange": {
+                "type": "boolean",
+                "description": "Select if this is a location change for an existing SBHC."
+              },
+              "SBHCApprovalDocument": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "The facility will not be rendering x-ray services or other radiology services."
+          },
+          "clinicPolicyProcedures": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "isPainManagementClinic": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Provided location performs Toxicology Tests."
+          },
+          "physicianCredentials": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "SBHCSponsoringAgency": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "Jurisdictions": {
+    "title": "Jurisdictions",
+    "type": "object",
+    "properties": {
+      "Allegany": {
+        "type": "boolean"
+      },
+      "AnneArundel": {
+        "type": "boolean"
+      },
+      "BaltimoreCity": {
+        "type": "boolean"
+      },
+      "BaltimoreCounty": {
+        "type": "boolean"
+      },
+      "Calvert": {
+        "type": "boolean"
+      },
+      "Caroline": {
+        "type": "boolean"
+      },
+      "Carroll": {
+        "type": "boolean"
+      },
+      "Cecil": {
+        "type": "boolean"
+      },
+      "Charles": {
+        "type": "boolean"
+      },
+      "Dorchester": {
+        "type": "boolean"
+      },
+      "Frederick": {
+        "type": "boolean"
+      },
+      "Garrett": {
+        "type": "boolean"
+      },
+      "Harford": {
+        "type": "boolean"
+      },
+      "Howard": {
+        "type": "boolean"
+      },
+      "Kent": {
+        "type": "boolean"
+      },
+      "Montgomery": {
+        "type": "boolean"
+      },
+      "PrinceGeorges": {
+        "type": "boolean"
+      },
+      "QueenAnne": {
+        "type": "boolean"
+      },
+      "Somerset": {
+        "type": "boolean"
+      },
+      "StMary": {
+        "type": "boolean"
+      },
+      "Talbot": {
+        "type": "boolean"
+      },
+      "Washington": {
+        "type": "boolean"
+      },
+      "Wicomico": {
+        "type": "boolean"
+      },
+      "Worcester": {
+        "type": "boolean"
+      }
+    },
+    "additionalProperties": false
+  }
+}

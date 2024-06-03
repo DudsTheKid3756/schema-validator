@@ -1,0 +1,131 @@
+{
+  "FacilityPT89": {
+    "title": "1915(i) Intensive Behavioral Health Services for Children, Youth, and Families - Programs and Facilities",
+    "type": "object",
+    "properties": {
+      "BHAProviderApplication": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "hasCompletedBHAProviderApplication": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "attachDocument": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "hasCompletedBHAProviderApplication": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ],
+                "description": "Indicates that user has not completed 1915i BHA Provider Application appropriate to service type. "
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "mobileCrisisOrIntensiveInHome": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "willRenderMobileCrisisResponseServices": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "psychiatricRehabilitationLicense": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "willRenderMobileCrisisResponseServices": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "renderingRespiteServices": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "willRenderRespiteServices": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "respiteCareLicense": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "willRenderRespiteServices": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]}
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "renderingPeerSupportServices": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "willRenderPeerSupportServices": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]},
+              "letterShowingCompletionOfRequiredTraining": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "willRenderPeerSupportServices": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]}
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "additionalProperties": false
+  }
+}

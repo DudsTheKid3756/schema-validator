@@ -1,0 +1,112 @@
+{
+  "FacilityPT54": {
+    "title": "IMD Residential SUD Adult",
+    "type": "object",
+    "properties": {
+      "ASAMLevelOfCare": {
+        "type": "object",
+        "properties": {
+          "hasStaffingLevel37WM": {
+            "type": "boolean"
+          },
+          "hasStaffingLevel37": {
+            "type": "boolean"
+          },
+          "hasStaffingLevel35": {
+            "type": "boolean"
+          },
+          "hasStaffingLevel33": {
+            "type": "boolean"
+          },
+          "hasStaffingLevel31": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "physicianNPOrPAonSite": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/professional-details-subschema-ref.json#/ProfessionalDetail"
+        }
+      },
+      "nurseRN": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/professional-details-subschema-ref.json#/ProfessionalDetail"
+        }
+      },
+      "nurseLPN": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/professional-details-subschema-ref.json#/ProfessionalDetail"
+        }
+      },
+      "facilityDirectorAndOthers": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/professional-details-subschema-ref.json#/ProfessionalDetail"
+        }
+      },
+      "professionalDetails": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/professional-details-subschema-ref.json#/ProfessionalDetail"
+        }
+      },
+      "writtenPolicyCOMAR": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "evidenceBasedPracticeServices": {
+        "type": "object",
+        "properties": {
+          "EBPSelection": {
+            "type": "object",
+            "properties": {
+              "ACT": {
+                "type": "boolean"
+              },
+              "CBT": {
+                "type": "boolean"
+              },
+              "MAT": {
+                "type": "boolean"
+              },
+              "MET": {
+                "type": "boolean"
+              },
+              "MI": {
+                "type": "boolean"
+              },
+              "psychoEducationPsychotherapy": {
+                "type": "boolean"
+              },
+              "RP": {
+                "type": "boolean"
+              },
+              "SFGT": {
+                "type": "boolean"
+              },
+              "SE": {
+                "type": "boolean"
+              },
+              "traumaInformedTreatment": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          },
+          "competenceDemonstration": {
+            "type": "string",
+            "maxLength": 300
+          }
+        },
+        "additionalProperties": false
+      },
+      "acknowledgement": {
+        "type": "boolean"
+      }
+    },
+    "additionalProperties": false
+  }
+}

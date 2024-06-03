@@ -1,0 +1,58 @@
+{
+  "AtypicalPT81": {
+    "title": "Case Management Model Waiver/Case Management Step/Not Elsewhere",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "hasActiveMedicareNumber": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Indicates if the facility has an active Medicare number."
+          },
+          "caseManagers": {
+            "type": "array",
+            "description": "An array of case managers working with the facility, with personal details conforming to a common subschema.",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "hasActiveMedicareNumber": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Indicates if the facility has an active Medicare number."
+          },
+          "medicareDocumentation": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "medicareNumber": {
+            "type": "string",
+            "description": "The facility's Medicare number."
+          },
+          "medicareFiscalYearEndDate": {
+            "$ref": "../../common/common-pattern-ref.json#/Date"
+          },
+          "caseManagers": {
+            "type": "array",
+            "description": "An array of case managers employed by the facility, each conforming to a detailed personal information subschema.",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

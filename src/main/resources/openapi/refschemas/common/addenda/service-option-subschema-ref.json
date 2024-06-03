@@ -1,0 +1,43 @@
+{
+  "ServiceOption": {
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "hasService": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "hasService": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "marylandMedicareProviderNumber":{
+            "type":"string"
+          },
+          "applicableLicense": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

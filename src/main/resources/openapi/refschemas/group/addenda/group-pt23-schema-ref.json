@@ -1,0 +1,170 @@
+{
+  "GroupPT23": {
+    "title": "Nurse Practitioners",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "providesHealthyStepsServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "healthyStepsActiveSiteConfirmationLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "SBHCSponsoringAgency": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "SBHCSponsoringAgencyInfo": {
+            "type": "object",
+            "properties": {
+              "billingProviderNPI": {
+                "$ref": "../../common/common-pattern-ref.json#/ProviderNPI"
+              },
+              "billingProviderTaxID": {
+                "$ref": "../../common/common-pattern-ref.json#/TaxIdNumber"
+              },
+              "billingProviderMA": {
+                "$ref": "../../common/common-pattern-ref.json#/MANumber"
+              },
+              "SBHCName": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9 @#&,.\\-'/]+$",
+                "description": "Name of the SBHC."
+              },
+              "streetAddressLine1": {
+                "$ref": "../../common/common-pattern-ref.json#/PrimaryStreetAddress"
+              },
+              "streetAddressLine2": {
+                "$ref": "../../common/common-pattern-ref.json#/SecondaryStreetAddress"
+              },
+              "city": {
+                "$ref": "../../common/common-pattern-ref.json#/City"
+              },
+              "state": {
+                "$ref": "../../common/common-pattern-ref.json#/StateCode"
+              },
+              "zipCode": {
+                "$ref": "../../common/common-pattern-ref.json#/ZipCode"
+              },
+              "locationChange": {
+                "type": "boolean",
+                "description": "Select if this is a location change for an existing SBHC."
+              },
+              "SBHCApprovalDocument": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "providesHealthyStepsServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "SBHCSponsoringAgency": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "SBHCSponsoringAgencyInfo": {
+            "type": "object",
+            "properties": {
+              "billingProviderNPI": {
+                "$ref": "../../common/common-pattern-ref.json#/ProviderNPI"
+              },
+              "billingProviderTaxID": {
+                "$ref": "../../common/common-pattern-ref.json#/TaxIdNumber"
+              },
+              "billingProviderMA": {
+                "$ref": "../../common/common-pattern-ref.json#/MANumber"
+              },
+              "SBHCName": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9 @#&,.\\-'/]+$",
+                "description": "Name of the SBHC."
+              },
+              "streetAddressLine1": {
+                "$ref": "../../common/common-pattern-ref.json#/PrimaryStreetAddress"
+              },
+              "streetAddressLine2": {
+                "$ref": "../../common/common-pattern-ref.json#/SecondaryStreetAddress"
+              },
+              "city": {
+                "$ref": "../../common/common-pattern-ref.json#/City"
+              },
+              "state": {
+                "$ref": "../../common/common-pattern-ref.json#/StateCode"
+              },
+              "zipCode": {
+                "$ref": "../../common/common-pattern-ref.json#/ZipCode"
+              },
+              "locationChange": {
+                "type": "boolean",
+                "description": "Select if this is a location change for an existing SBHC."
+              },
+              "SBHCApprovalDocument": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "providesHealthyStepsServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "healthyStepsActiveSiteConfirmationLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "SBHCSponsoringAgency": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "providesHealthyStepsServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "SBHCSponsoringAgency": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

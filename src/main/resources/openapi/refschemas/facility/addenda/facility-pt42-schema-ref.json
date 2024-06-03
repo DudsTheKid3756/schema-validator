@@ -1,0 +1,944 @@
+{
+  "FacilityPT42": {
+    "title": "Medical Day Care Adults (Facility)",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "complianceWithAllCOMAR": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "AMDCOrientationCertificate": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "staffOrganizationChart": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "physicalOccupationalTherapistContract": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "staffMembersOnsite": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "CPRCertification": {
+                  "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                },
+                "firstAidCertification": {
+                  "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "philosophiesAndObjectives": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "participantPopulation": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "geographicAreas": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "staffHours": {
+            "type": "object",
+            "properties": {
+              "weekdayHours": {
+                "type": "object",
+                "properties": {
+                  "monday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "tuesday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "wednesday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "thursday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "friday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "applyToWeekdays": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "weekendHours": {
+                "type": "object",
+                "properties": {
+                  "saturday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "sunday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "participantHours": {
+            "type": "object",
+            "properties": {
+              "weekdayHours": {
+                "type": "object",
+                "properties": {
+                  "monday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "tuesday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "wednesday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "thursday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "friday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "applyToWeekdays": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "weekendHours": {
+                "type": "object",
+                "properties": {
+                  "saturday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "sunday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "programDirectorEmployedOrUnderContract": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "object",
+                  "properties": {
+                    "jobDescription": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "professionalLicense": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "resume": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "degree": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "contractor": {
+                  "type": "boolean"
+                },
+                "hoursWorkPerWeek": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 168
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "registeredNurseEmployedOrUnderContract": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "object",
+                  "properties": {
+                    "jobDescription": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "professionalLicense": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "resume": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "degree": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "contractor": {
+                  "type": "boolean"
+                },
+                "hoursWorkPerWeek": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 168
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "activitiesCoordinatorEmployedOrUnderContract": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "object",
+                  "properties": {
+                    "jobDescription": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "professionalLicense": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "resume": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "degree": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "contractor": {
+                  "type": "boolean"
+                },
+                "hoursWorkPerWeek": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 168
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "licensedSocialWorkerEmployedOrUnderContract": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "object",
+                  "properties": {
+                    "jobDescription": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "professionalLicense": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "resume": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "degree": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "contractor": {
+                  "type": "boolean"
+                },
+                "hoursWorkPerWeek": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 168
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "medicalDirectorEmployedOrUnderContract": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "object",
+                  "properties": {
+                    "jobDescription": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "professionalLicense": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "resume": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "degree": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "contractor": {
+                  "type": "boolean"
+                },
+                "hoursWorkPerWeek": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 168
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "programDirectorFullTimeStaffMember": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "object",
+                  "properties": {
+                    "jobDescription": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "professionalLicense": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "resume": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "degree": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "contractor": {
+                  "type": "boolean"
+                },
+                "hoursWorkPerWeek": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 168
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "registeredNurseFullTimeStaffMember": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "object",
+                  "properties": {
+                    "jobDescription": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "professionalLicense": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "resume": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "degree": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "contractor": {
+                  "type": "boolean"
+                },
+                "hoursWorkPerWeek": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 168
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "planToProvideTraining": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "policiesAndProcedureForQualityAssurance": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "policiesAndProcedureMultiDisciplinaryTeam": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "policiesAndProcedureForPhysicalAndOccupationalTherapy": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "policiesAndProcedureForDischargeAndReferral": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "transportationServiceProvided": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "notApplicable": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "otherServiceProvidedIfAnyThatAreNotCovered": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "blankCopyOfAttendanceRecordForm": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "policiesAndProcedureForAttendance": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "complianceWithAllCOMAR": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "reasonForNonCompliance": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "AMDCOrientationCertificate": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "staffOrganizationChart": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "physicalOccupationalTherapistContract": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "staffMembersOnsite": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "CPRCertification": {
+                  "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                },
+                "firstAidCertification": {
+                  "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "philosophiesAndObjectives": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "participantPopulation": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "geographicAreas": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "staffHours": {
+            "type": "object",
+            "properties": {
+              "weekdayHours": {
+                "type": "object",
+                "properties": {
+                  "monday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "tuesday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "wednesday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "thursday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "friday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "applyToWeekdays": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "weekendHours": {
+                "type": "object",
+                "properties": {
+                  "saturday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "sunday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "participantHours": {
+            "type": "object",
+            "properties": {
+              "weekdayHours": {
+                "type": "object",
+                "properties": {
+                  "monday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "tuesday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "wednesday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "thursday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "friday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "applyToWeekdays": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "weekendHours": {
+                "type": "object",
+                "properties": {
+                  "saturday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  },
+                  "sunday": {
+                    "$ref": "../../common/addenda/daily-hours-subschema-ref.json#/DailyHours"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "programDirectorEmployedOrUnderContract": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "object",
+                  "properties": {
+                    "jobDescription": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "professionalLicense": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "resume": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "degree": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "contractor": {
+                  "type": "boolean"
+                },
+                "hoursWorkPerWeek": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 168
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "registeredNurseEmployedOrUnderContract": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "object",
+                  "properties": {
+                    "jobDescription": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "professionalLicense": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "resume": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "degree": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "contractor": {
+                  "type": "boolean"
+                },
+                "hoursWorkPerWeek": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 168
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "activitiesCoordinatorEmployedOrUnderContract": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "object",
+                  "properties": {
+                    "jobDescription": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "professionalLicense": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "resume": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "degree": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "contractor": {
+                  "type": "boolean"
+                },
+                "hoursWorkPerWeek": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 168
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "licensedSocialWorkerEmployedOrUnderContract": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "object",
+                  "properties": {
+                    "jobDescription": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "professionalLicense": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "resume": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "degree": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "contractor": {
+                  "type": "boolean"
+                },
+                "hoursWorkPerWeek": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 168
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "medicalDirectorEmployedOrUnderContract": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "object",
+                  "properties": {
+                    "jobDescription": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "professionalLicense": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "resume": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "degree": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "contractor": {
+                  "type": "boolean"
+                },
+                "hoursWorkPerWeek": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 168
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "programDirectorFullTimeStaffMember": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "object",
+                  "properties": {
+                    "jobDescription": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "professionalLicense": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "resume": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "degree": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "contractor": {
+                  "type": "boolean"
+                },
+                "hoursWorkPerWeek": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 168
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "registeredNurseFullTimeStaffMember": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "object",
+                  "properties": {
+                    "jobDescription": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "professionalLicense": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "resume": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    },
+                    "degree": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "contractor": {
+                  "type": "boolean"
+                },
+                "hoursWorkPerWeek": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 168
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "planToProvideTraining": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "policiesAndProcedureForQualityAssurance": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "policiesAndProcedureMultiDisciplinaryTeam": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "policiesAndProcedureForPhysicalAndOccupationalTherapy": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "policiesAndProcedureForDischargeAndReferral": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "transportationServiceProvided": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "notApplicable": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "blankCopyOfAttendanceRecordForm": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "policiesAndProcedureForAttendance": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

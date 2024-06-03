@@ -1,0 +1,42 @@
+{
+  "FacilityPTMT": {
+    "title": "Mobile Treatment Program",
+    "type": "object",
+    "properties": {
+      "programDirectorDetails": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+        }
+      },
+      "psychiatristDetails": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+        }
+      },
+      "registeredNurseDetails": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+        }
+      },
+      "socialWorkerDetails": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+        }
+      },
+      "otherProfessionalsDetails": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+        }
+      },
+      "criminalHistoryPolicy": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      }
+    },
+    "additionalProperties": false
+  }
+}

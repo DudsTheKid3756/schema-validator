@@ -1,0 +1,61 @@
+{
+  "FacilityPT91": {
+    "title": "Local Education/Local Lead Agencies",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "dateOfAgreement": {
+            "type": "string",
+            "pattern": "(^(0[1-9]|1[0-2])\\/(0[1-9]|[12][0-9]|3[01])\\/\\d{4}$)|(^$)",
+            "description": "The date the addendum to the provider agreement is made."
+          },
+          "providerName": {
+            "type": "string",
+            "description": "The name of the provider."
+          },
+          "rendersServicesAsNonPublicSchool": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Indicates if the provider renders services as a non-public school."
+          },
+          "stateBoardOfEducationCertificate": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "acknowledge": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "dateOfAgreement": {
+            "type": "string",
+            "pattern": "(^(0[1-9]|1[0-2])\\/(0[1-9]|[12][0-9]|3[01])\\/\\d{4}$)|(^$)",
+            "description": "The date the addendum to the provider agreement is made."
+          },
+          "providerName": {
+            "type": "string",
+            "description": "The name of the provider."
+          },
+          "rendersServicesAsNonPublicSchool": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Indicates if the provider does not render services as a non-public school and hence the certificate is not required."
+          },
+          "acknowledge": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

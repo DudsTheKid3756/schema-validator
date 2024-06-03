@@ -1,0 +1,72 @@
+{
+  "FacilityPT62": {
+    "title": "Durable Medical Supplies Services",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "CMSMedicareApprovalLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "glucoseMonitor": {
+            "type": "boolean"
+          },
+          "footWear": {
+            "type": "boolean"
+          },
+          "equipmentPurchase": {
+            "type": "boolean"
+          },
+          "equipmentRental": {
+            "type": "boolean"
+          },
+          "hearingAides": {
+            "type": "boolean"
+          },
+          "relatedRespiratoryEquipment": {
+            "type": "boolean"
+          },
+          "oxygen": {
+            "type": "boolean",
+            "enum": [true]
+          },
+          "attachOHCQLicense": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "CMSMedicareApprovalLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "glucoseMonitor": {
+            "type": "boolean"
+          },
+          "footWear": {
+            "type": "boolean"
+          },
+          "equipmentPurchase": {
+            "type": "boolean"
+          },
+          "equipmentRental": {
+            "type": "boolean"
+          },
+          "hearingAides": {
+            "type": "boolean"
+          },
+          "relatedRespiratoryEquipment": {
+            "type": "boolean"
+          },
+          "oxygen": {
+            "type": "boolean",
+            "enum": [false]
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

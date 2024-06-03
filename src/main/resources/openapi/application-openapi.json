@@ -1,0 +1,651 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Provider Application",
+    "description": "An API to create and manage an application for a provider",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8090/v1/application",
+      "description": "Local server url"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Provider Application",
+      "description": "API endpoints to create, retrieve, and update an application for a provider"
+    }
+  ],
+  "security": [
+    {
+      "jwtBearer": []
+    }
+  ],
+  "paths": {
+    "/create": {
+      "post": {
+        "summary": "Creates a new application.",
+        "tags": [
+          "Provider Application"
+        ],
+        "operationId": "create",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/CreateRequest"
+        },
+        "responses": {
+          "201": {
+            "$ref": "#/components/responses/CreateResponse"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFoundResponse"
+          }
+        }
+      }
+    },
+    "/retrieve": {
+      "post": {
+        "summary": "Retrieves an application by ID and section.",
+        "tags": [
+          "Provider Application"
+        ],
+        "operationId": "retrieve",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/RetrieveRequest"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/RetrieveResponse"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequestResponse"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFoundResponse"
+          }
+        }
+      }
+    },
+    "/update": {
+      "post": {
+        "summary": "Updates an application by ID and section.",
+        "tags": [
+          "Provider Application"
+        ],
+        "operationId": "update",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/UpdateRequest"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/UpdateResponse"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequestResponse"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFoundResponse"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "requestBodies": {
+      "CreateRequest": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/CreateRequest"
+            }
+          }
+        }
+      },
+      "RetrieveRequest": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/RetrieveRequest"
+            }
+          }
+        }
+      },
+      "UpdateRequest": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/UpdateRequest"
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "CreateResponse": {
+        "description": "Application created successfully.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/CreateResponse"
+            }
+          }
+        }
+      },
+      "RetrieveResponse": {
+        "description": "Application subset retrieved successfully.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/RetrieveResponse"
+            }
+          }
+        }
+      },
+      "UpdateResponse": {
+        "description": "Application updated successfully.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/UpdateResponse"
+            }
+          }
+        }
+      },
+      "BadRequestResponse": {
+        "description": "Bad Request",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ExceptionResponse"
+            },
+            "examples": {
+              "BadRequest": {
+                "$ref": "#/components/examples/BadRequest"
+              }
+            }
+          }
+        }
+      },
+      "NotFoundResponse": {
+        "description": "Not Found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ExceptionResponse"
+            },
+            "examples": {
+              "NotFound": {
+                "$ref": "#/components/examples/NotFound"
+              }
+            }
+          }
+        }
+      }
+    },
+    "schemas": {
+      "CreateRequest": {
+        "type": "object",
+        "properties": {
+          "providerNPI": {
+            "$ref": "refschemas/common/common-pattern-ref.json#/ProviderNPI"
+          },
+          "providerTypeCode": {
+            "type": "string",
+            "description": "Provider type *CODE*.  (e.g. Free-Standing Birth Centers = 31)",
+            "minLength": 2
+          },
+          "practiceType": {
+            "$ref": "#/components/schemas/PracticeType"
+          },
+          "applicationTypeCode": {
+            "$ref": "#/components/schemas/ApplicationTypeCode"
+          }
+        },
+        "required": [
+          "providerNPI",
+          "providerTypeCode",
+          "practiceType",
+          "applicationTypeCode"
+        ],
+        "additionalProperties": false
+      },
+      "CreateResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the Application."
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the Application."
+          }
+        }
+      },
+      "RetrieveRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "practiceType": {
+            "$ref": "#/components/schemas/PracticeType"
+          },
+          "section": {
+            "$ref": "#/components/schemas/ProviderSection"
+          }
+        },
+        "required": [
+          "id",
+          "practiceType",
+          "section"
+        ],
+        "additionalProperties": false
+      },
+      "RetrieveResponse": {
+        "type": "object",
+        "properties": {
+          "application": {
+            "$ref": "#/components/schemas/ApplicationResponse"
+          }
+        }
+      },
+      "UpdateRequest": {
+        "type": "object",
+        "properties": {
+          "practiceType": {
+            "$ref": "#/components/schemas/PracticeType"
+          },
+          "section": {
+            "$ref": "#/components/schemas/ProviderSection"
+          },
+          "application": {
+            "$ref": "#/components/schemas/ApplicationRequest"
+          }
+        },
+        "required": [
+          "practiceType",
+          "section",
+          "application"
+        ],
+        "additionalProperties": false
+      },
+      "UpdateResponse": {
+        "type": "object",
+        "properties": {
+          "application": {
+            "$ref": "#/components/schemas/ApplicationResponse"
+          }
+        }
+      },
+      "ApplicationRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the Application."
+          },
+          "provider": {
+            "$ref": "#/components/schemas/ProviderRequest"
+          }
+        },
+        "required": [
+          "id",
+          "provider"
+        ],
+        "additionalProperties": false
+      },
+      "ApplicationResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the Application."
+          },
+          "provider": {
+            "$ref": "#/components/schemas/ProviderResponse"
+          }
+        }
+      },
+      "ProviderRequest": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "individual": {
+                "$ref": "refschemas/individual/individual-schema-ref.json#/Individual"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "group": {
+                "$ref": "refschemas/group/group-schema-ref.json#/Group"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "facility": {
+                "$ref": "refschemas/facility/facility-schema-ref.json#/Facility"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "rendering": {
+                "$ref": "refschemas/rendering/rendering-schema-ref.json#/Rendering"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "crossover": {
+                "$ref": "refschemas/crossover/crossover-schema-ref.json#/Crossover"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "atypical": {
+                "$ref": "refschemas/atypical/atypical-schema-ref.json#/Atypical"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ProviderResponse": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "individual": {
+                "$ref": "refschemas/individual/individual-schema-ref.json#/Individual"
+              },
+              "providerNPI": {
+                "$ref": "refschemas/common/common-pattern-ref.json#/ProviderNPI"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "group": {
+                "$ref": "refschemas/group/group-schema-ref.json#/Group"
+              },
+              "providerNPI": {
+                "$ref": "refschemas/common/common-pattern-ref.json#/ProviderNPI"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "facility": {
+                "$ref": "refschemas/facility/facility-schema-ref.json#/Facility"
+              },
+              "providerNPI": {
+                "$ref": "refschemas/common/common-pattern-ref.json#/ProviderNPI"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "rendering": {
+                "$ref": "refschemas/rendering/rendering-schema-ref.json#/Rendering"
+              },
+              "providerNPI": {
+                "$ref": "refschemas/common/common-pattern-ref.json#/ProviderNPI"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "crossover": {
+                "$ref": "refschemas/crossover/crossover-schema-ref.json#/Crossover"
+              },
+              "providerNPI": {
+                "$ref": "refschemas/common/common-pattern-ref.json#/ProviderNPI"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "atypical": {
+                "$ref": "refschemas/atypical/atypical-schema-ref.json#/Atypical"
+              },
+              "providerNPI": {
+                "$ref": "refschemas/common/common-pattern-ref.json#/ProviderNPI"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "MocaBasicInfoRequest": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "mocaId": {
+                "type": "string"
+              },
+              "basicInfo": {
+                "$ref": "refschemas/common/common-schema-ref.json#/MocaInfo"
+              },
+              "tableIndex": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "mocaId",
+              "basicInfo",
+              "tableIndex"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "pageId": {
+                "$ref": "#/components/schemas/PageId"
+              },
+              "basicInfo": {
+                "$ref": "refschemas/common/common-schema-ref.json#/MocaInfo"
+              },
+              "tableIndex": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "pageId",
+              "basicInfo",
+              "tableIndex"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      },
+      "MocaBasicInfoResponse": {
+        "type": "object",
+        "properties": {
+          "mocaId": {
+            "type": "string"
+          },
+          "pageId": {
+            "$ref": "#/components/schemas/PageId"
+          },
+          "basicInfo": {
+            "$ref": "refschemas/common/common-schema-ref.json#/MocaInfo"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MocaDetailsRequest": {
+        "type": "object",
+        "properties": {
+          "mocaId": {
+            "type": "string"
+          },
+          "details": {
+            "$ref": "refschemas/common/common-schema-ref.json#/MocaDetails"
+          }
+        },
+        "required": [
+          "mocaId",
+          "details"
+        ],
+        "additionalProperties": false
+      },
+      "PracticeType": {
+        "type": "string",
+        "description": "The specific provider practice.",
+        "enum": [
+          "INDIVIDUAL",
+          "RENDERING",
+          "GROUP",
+          "FACILITY",
+          "ATYPICAL",
+          "CROSSOVER"
+        ]
+      },
+      "ApplicationTypeCode": {
+        "type": "string",
+        "description": "The specific type of application.",
+        "enum": [
+          "AT001",
+          "AT002",
+          "AT003",
+          "AT004",
+          "AT005",
+          "AT006"
+        ]
+      },
+      "ProviderSection": {
+        "type": "string",
+        "description": "The specific section of the provider data to retrieve.",
+        "enum": [
+          "PERSONAL_INFO",
+          "ADDRESS_INFO",
+          "LOGISTIC_INFO",
+          "CONTACT_INFO",
+          "PROVIDER_INFO",
+          "AFFILIATION_INFO",
+          "STATE_LICENSES",
+          "TAXONOMY_INFO",
+          "ADDITIONAL_CERTIFICATIONS",
+          "ADVERSE_ACTION_INFO",
+          "FINES_AND_DEBTS_INFO",
+          "SIGNIFICANT_TRANSACTION_INFO",
+          "SUPPORTING_INFO",
+          "SUBCONTRACTOR_INFO",
+          "LICENSE_AND_CERTIFICATE_INFO",
+          "ALL"
+        ]
+      },
+      "MocaDetailsSection": {
+        "type": "string",
+        "description": "The specific section of the MOCA details dialog.",
+        "enum": [
+          "ENTITY_INFO",
+          "MEDICAID_INFO",
+          "SUBCONTRACTOR_INFO",
+          "FAMILY_ASSOCIATION_INFO",
+          "ADVERSE_ACTION_INFO"
+        ]
+      },
+      "PageId": {
+        "type": "string",
+        "enum": [
+          "INDIRECT",
+          "DIRECT",
+          "OPERATING_EMPLOYEE"
+        ]
+      },
+      "ExceptionResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "error": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "examples": {
+      "BadRequest": {
+        "description": "Generic 400 Bad Request response",
+        "value": {
+          "code": 400,
+          "status": "Bad Request",
+          "message": "XXXX field is required.",
+          "error": "One or more or the provided values is invalid.",
+          "path": "/mdh/pmm/v1/application/<operationId>",
+          "timestamp": "2023-11-27T18:02:47.492Z"
+        }
+      },
+      "NotFound": {
+        "description": "Generic 404 Not Found response",
+        "value": {
+          "code": 404,
+          "status": "Not Found",
+          "message": "Resource with ID 123 could not be found.",
+          "error": "Requested resource was not found.",
+          "path": "/mdh/pmm/v1/application/<operationId>",
+          "timestamp": "2023-11-27T18:02:47.492Z"
+        }
+      }
+    },
+    "securitySchemes": {
+      "jwtBearer": {
+        "type": "http",
+        "description": "JWT Bearer Authentication Scheme",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

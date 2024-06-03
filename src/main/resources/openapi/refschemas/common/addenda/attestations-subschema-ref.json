@@ -1,0 +1,79 @@
+{
+  "Attestations": {
+    "type": "object",
+    "properties": {
+      "attestationOfLifeStyleCoachQualification": {
+        "type": "object",
+        "properties": {
+          "attestsCDCApprovedLifestyleCoachTrainingAndNDPPLCPCompetencies": {
+            "type": "boolean"
+          },
+          "rosterOfAllLifestyleCoachesInGoodStanding": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "attestationOfCDCRecognizedOrganizationRecordKeeping": {
+        "type": "object",
+        "properties": {
+          "allOwnersWith5PercentOrMoreOwnershipRequiredToCompleteFCBC": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "attestationOfFingerprintCriminalBackgroundCheckCompletion": {
+        "type": "object",
+        "properties": {
+          "attestationOfFCBCasRequiredByCMS": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "attestationOfOutOFStateEnrollmentSiteVisit": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "hasReceivedOutOfStateEnrollmentSiteVisit": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "hasNotReceivedOutOfStateEnrollmentSiteVisit": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "hasReceivedOutOfStateEnrollmentSiteVisit": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              },
+              "hasNotReceivedOutOfStateEnrollmentSiteVisit": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "FacilityPT60": {
+    "title": "Diagnostic Services, Other",
+    "type": "object",
+    "properties": {
+      "CMSMedicareApprovalLetter": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "services": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/diagnostic-service-subschema-ref.json#/DiagnosticService"
+        }
+      }
+    },
+    "additionalProperties": false
+  }
+}

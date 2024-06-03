@@ -1,0 +1,52 @@
+{
+  "FacilityPTVP": {
+    "title": "Community Violence Prevention",
+    "type": "object",
+    "properties": {
+      "violencePreventionTraining": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string",
+              "description": "First name of the violence prevention professional."
+            },
+            "lastName": {
+              "type": "string",
+              "description": "Last name of the violence prevention professional."
+            }
+          },
+          "additionalProperties": false
+        },
+        "description": "List of violence prevention professionals employed or under contracts."
+      },
+      "allProfessionalsCertified": {
+        "type": "boolean",
+        "description": "All violence prevention professionals are Health Alliance for Violence Intervention (HAVI) certified and have completed the required training and continuing education."
+      },
+      "hospitalAffiliation": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "hospitalNPI": {
+              "type": "string",
+              "description": "National Provider Identifier of the hospital."
+            },
+            "hospitalMedicaidProviderNumber": {
+              "type": "string",
+              "description": "Hospital Maryland Medicaid Provider Number."
+            },
+            "hospitalAffiliationDocuments": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "additionalProperties": false
+        },
+        "description": "Required documents for proving hospital affiliation."
+      }
+    },
+    "additionalProperties": false
+  }
+}

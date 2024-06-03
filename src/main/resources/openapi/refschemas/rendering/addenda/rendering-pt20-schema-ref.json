@@ -1,0 +1,113 @@
+{
+  "RenderingPT20": {
+    "title": "Physician (Rendering)",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "provideHealthyStepsServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Does your affiliated group site provide HealthySteps Services?"
+          },
+          "healthyStepsConfirmationLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "provideCenteringPregnancyCare": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Has your affiliated group received approval from the Centering Healthcare Institute to provide Centering Pregnancy Care?"
+          },
+          "centeringPregnancyApprovalLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "provideHealthyStepsServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Does your affiliated group site provide HealthySteps Services?"
+          },
+          "provideCenteringPregnancyCare": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Has your affiliated group received approval from the Centering Healthcare Institute to provide Centering Pregnancy Care?"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "provideHealthyStepsServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Does your affiliated group site provide HealthySteps Services?"
+          },
+          "healthyStepsConfirmationLetter": {
+            "allOf": [
+              {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              },
+              {
+                "description": "HealthyStep Active Site Confirmation Letter"
+              }
+            ]
+          },
+          "provideCenteringPregnancyCare": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Has your affiliated group received approval from the Centering Healthcare Institute to provide Centering Pregnancy Care?"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "provideHealthyStepsServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Does your affiliated group site provide HealthySteps Services?"
+          },
+          "provideCenteringPregnancyCare": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Has your affiliated group received approval from the Centering Healthcare Institute to provide Centering Pregnancy Care?"
+          },
+          "centeringPregnancyApprovalLetter": {
+            "allOf": [
+              {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              },
+              {
+                "description": "Centering Pregnancy Approval Letter"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

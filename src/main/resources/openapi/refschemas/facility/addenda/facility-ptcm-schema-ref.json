@@ -1,0 +1,250 @@
+{
+  "FacilityPTCM": {
+    "title": "Mental Health Case Management Provider Form",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "mentalHealthCaseManagementChildrenAndYouth": {
+            "type": "object",
+            "properties": {
+              "hasMentalHealthCaseManagementCareCoordinationChildrenAndYouth": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "willMeetRequirementForCareCoordinationChildrenYouth": {
+                "type": "boolean"
+              },
+              "willMeetRequirementForIntensiveBehavioralHealthServices": {
+                "type": "boolean"
+              },
+              "willMeetRequirementForGeneralMedicalAssistanceProviderParticipation": {
+                "type": "boolean"
+              },
+              "willAdhereToProviderAgreement": {
+                "type": "boolean"
+              },
+              "attachLetterOfSupportFromCSAOrLBHA": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              },
+              "LBHACSAName": {
+                "type": "string",
+                "description": "Name of the Local Behavioral Health Authority/Core Service Agency."
+              },
+              "LBHACSAJurisdiction": {
+                "type": "string",
+                "description": "Jurisdiction of the Local Behavioral Health Authority/Core Service Agency."
+              },
+              "willExplainManualOfPoliciesAndProceduresForStaffingAssurance": {
+                "type": "boolean"
+              },
+              "trainingRequirementsComplianceByMDH": {
+                "type": "boolean"
+              },
+              "reportingRequirementsCompliance": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          },
+          "mentalHealthCaseManagementAdult": {
+            "type": "object",
+            "properties": {
+              "hasMentalHealthCaseManagementCareCoordinationAdult": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "mentalHealthCaseManagementChildrenAndYouth": {
+            "type": "object",
+            "properties": {
+              "hasMentalHealthCaseManagementCareCoordinationChildrenAndYouth": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "mentalHealthCaseManagementAdult": {
+            "type": "object",
+            "properties": {
+              "hasMentalHealthCaseManagementCareCoordinationAdult": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "mentalHealthCaseManagementAdult": {
+            "type": "object",
+            "properties": {
+              "hasMentalHealthCaseManagementCareCoordinationAdult": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "willMeetRequirementForCareCoordinationAdult": {
+                "type": "boolean"
+              },
+              "willMeetRequirementForGeneralMedicalAssistanceProviderParticipation": {
+                "type": "boolean"
+              },
+              "willAdhereToProviderAgreement": {
+                "type": "boolean"
+              },
+              "attachLetterOfSupportFromCSAOrLBHA": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              },
+              "LBHACSAName": {
+                "type": "string",
+                "description": "Name of the Local Behavioral Health Authority/Core Service Agency."
+              },
+              "LBHACSAJurisdiction": {
+                "type": "string",
+                "description": "Jurisdiction of the Local Behavioral Health Authority/Core Service Agency."
+              },
+              "willExplainManualOfPoliciesAndProceduresForStaffingAssurance": {
+                "type": "boolean"
+              },
+              "trainingRequirementsComplianceByDHMH": {
+                "type": "boolean"
+              },
+              "reportingRequirementsCompliance": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          },
+          "mentalHealthCaseManagementChildrenAndYouth": {
+            "type": "object",
+            "properties": {
+              "hasMentalHealthCaseManagementCareCoordinationChildrenAndYouth": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "mentalHealthCaseManagementChildrenAndYouth": {
+            "type": "object",
+            "properties": {
+              "hasMentalHealthCaseManagementCareCoordinationChildrenAndYouth": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "willMeetRequirementForCareCoordinationChildrenYouth": {
+                "type": "boolean"
+              },
+              "willMeetRequirementForIntensiveBehavioralHealthServices": {
+                "type": "boolean"
+              },
+              "willMeetRequirementForGeneralMedicalAssistanceProviderParticipation": {
+                "type": "boolean"
+              },
+              "willAdhereToProviderAgreement": {
+                "type": "boolean"
+              },
+              "attachLetterOfSupportFromCSAOrLBHA": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              },
+              "LBHACSAName": {
+                "type": "string",
+                "description": "Name of the Local Behavioral Health Authority/Core Service Agency."
+              },
+              "LBHACSAJurisdiction": {
+                "type": "string",
+                "description": "Jurisdiction of the Local Behavioral Health Authority/Core Service Agency."
+              },
+              "willExplainManualOfPoliciesAndProceduresForStaffingAssurance": {
+                "type": "boolean"
+              },
+              "trainingRequirementsComplianceByMDH": {
+                "type": "boolean"
+              },
+              "reportingRequirementsCompliance": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          },
+          "mentalHealthCaseManagementAdult": {
+            "type": "object",
+            "properties": {
+              "hasMentalHealthCaseManagementCareCoordinationAdult": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "willMeetRequirementForCareCoordinationAdult": {
+                "type": "boolean"
+              },
+              "willMeetRequirementForGeneralMedicalAssistanceProviderParticipation": {
+                "type": "boolean"
+              },
+              "willAdhereToProviderAgreement": {
+                "type": "boolean"
+              },
+              "attachLetterOfSupportFromCSAOrLBHA": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              },
+              "LBHACSAName": {
+                "type": "string",
+                "description": "Name of the Local Behavioral Health Authority/Core Service Agency."
+              },
+              "LBHACSAJurisdiction": {
+                "type": "string",
+                "description": "Jurisdiction of the Local Behavioral Health Authority/Core Service Agency."
+              },
+              "willExplainManualOfPoliciesAndProceduresForStaffingAssurance": {
+                "type": "boolean"
+              },
+              "trainingRequirementsComplianceByDHMH": {
+                "type": "boolean"
+              },
+              "reportingRequirementsCompliance": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

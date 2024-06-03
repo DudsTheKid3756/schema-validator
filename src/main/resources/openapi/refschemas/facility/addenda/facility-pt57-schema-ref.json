@@ -1,0 +1,87 @@
+{
+  "FacilityPT57": {
+    "title": "Nursing Facilities",
+    "type": "object",
+    "properties": {
+      "fiscalYearEndDate": {
+        "$ref": "../../common/common-pattern-ref.json#/Date"
+      },
+      "titleXIXVendorNumber": {
+        "type": "string",
+        "description": "Title XIX vendor number."
+      },
+      "effectiveDate": {
+        "$ref": "../../common/common-pattern-ref.json#/Date"
+      },
+      "acknowledge": {
+        "type": "boolean"
+      },
+      "genworthSurveyData": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "contactInformation": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "contactType": {
+              "type": "string",
+              "enum": [
+                "Private Daily Room Rate (PDRR)",
+                "Buyer",
+                "LTC Facility Administrator"
+              ],
+              "description": "Type of contact (e.g., LTC Facility Administrator, Buyer, etc.)."
+            },
+            "firstName": {
+              "type": "string",
+              "description": "First name of the contact."
+            },
+            "lastName": {
+              "type": "string",
+              "description": "Last name of the contact."
+            },
+            "positionTitle": {
+              "type": "string",
+              "description": "Position or title of the contact."
+            },
+            "phone": {
+              "type": "string",
+              "description": "Phone number of the contact."
+            },
+            "email": {
+              "type": "string",
+              "format": "email",
+              "description": "Email address of the contact."
+            }
+          },
+          "additionalProperties": false
+        },
+        "description": "List of contact information for various roles."
+      },
+      "certificateOfAssuranceOrLetterOfCredit": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "levelOfCareDetails": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "dailyRoomRateEffectiveDate": {
+              "type": "string"
+            },
+            "dailyRoomRateAmount": {
+              "type": "number",
+              "description": "Daily room rate amount for skilled care."
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "additionalProperties": false
+  }
+}

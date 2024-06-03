@@ -1,0 +1,102 @@
+{
+  "ProviderNPI": {
+    "type": "string",
+    "pattern": "(^\\d{10}$)|(^$)",
+    "description": "National Provider Identifier pattern"
+  },
+  "Date": {
+    "type": "string",
+    "pattern": "(^(0[1-9]|1[0-2])\\/(0[1-9]|[12][0-9]|3[01])\\/\\d{4}$)|(^$)",
+    "description": "Date pattern MM/DD/YYYY"
+  },
+  "Email": {
+    "type": "string",
+    "pattern": "(^(?=.{5,254}$)(?:[^<>()\\[\\]\\\\.,;:\\s@\"]+(?:[._-](?![._-])[^<>()\\[\\]\\\\.,;:\\s@\"]+)*|\"(?:[\\x01-\\x08\\x0B\\x0C\\x0E-\\x1F\\x21\\x23-\\x5B\\x5D-\\x7F]|\\\\[\\x01-\\x09\\x0B\\x0C\\x0E-\\x7F])*\")@[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.(com|org|gov|edu|net|mil)$)|(^$)",
+    "description": "Email address pattern"
+  },
+  "SocialSecurityNumber": {
+    "type": "string",
+    "pattern": "(^\\d{3}-\\d{2}-\\d{4}$)|(^$)",
+    "description": "Social Security Number pattern XXX-XX-XXXX"
+  },
+  "CommonName": {
+    "type": "string",
+    "pattern": "(^[a-zA-Z &,.'\\/-]*$)|(^$)",
+    "description": "Common name pattern"
+  },
+  "LegalName": {
+    "type": "string",
+    "pattern": "(^[a-zA-Z\\s@#&,.!'\\/-]*$)|(^$)",
+    "description": "Legal name pattern"
+  },
+  "Title": {
+    "type": "string",
+    "pattern": "(^[a-zA-Z @#&,.'\\/-]*$)|(^$)",
+    "description": "Title pattern"
+  },
+  "PhoneNumber": {
+    "type": "string",
+    "pattern": "(^\\([0-9]{3}\\)-[0-9]{3}-[0-9]{4}$)|(^$)",
+    "description": "Phone number pattern (XXX)-XXX-XXXX"
+  },
+  "Extension": {
+    "type": "string",
+    "pattern": "(^\\d{3,6}$)|(^$)",
+    "description": "Phone extension pattern"
+  },
+  "CommonTime": {
+    "type": "string",
+    "pattern": "(^([0-1][0-9]|2[0-3]):[0-5][0-9]$)|(^$)",
+    "description": "Time pattern HH:MM"
+  },
+  "SDATNumber": {
+    "type": "string",
+    "pattern": "(^[D|E|F|W|L|Z]\\d{8}$)|(^$)",
+    "description": "SDAT number pattern"
+  },
+  "URL": {
+    "type": "string",
+    "pattern": "(^https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_.~#?&//=]*)?$)|(^$)",
+    "description": "URL pattern"
+  },
+  "PrimaryStreetAddress": {
+    "type": "string",
+    "pattern": "(^[a-zA-Z0-9\\s\\-\\.]+$)|(^$)",
+    "description": "Street address line 1 pattern"
+  },
+  "SecondaryStreetAddress": {
+    "type": "string",
+    "pattern": "(^[a-zA-Z0-9 .#\\-]+$)|(^$)",
+    "description": "Street address line 2 pattern"
+  },
+  "City": {
+    "type": "string",
+    "pattern": "(^[a-zA-Z '.\\-]+$)|(^$)",
+    "description": "City pattern"
+  },
+  "StateCode": {
+    "type": "string",
+    "pattern": "(^(A[LKZR]|C[AOT]|D[EC]|FL|GA|HI|I[ADLN]|K[SY]|LA|M[ADEINOST]|N[CDEHJMVY]|O[HKR]|PA|RI|S[CD]|T[NX]|UT|V[AT]|W[AIVY])$)|(^$)",
+    "description": "State code pattern"
+  },
+  "ZipCode": {
+    "type": "string",
+    "pattern": "(^\\d{5}(?:-\\d{4})?$)|(^$)",
+    "description": "Zip code pattern"
+  },
+  "IdCombo": {
+    "type": "string",
+    "pattern": "(^\\d{3}-\\d{2}-\\d{4}$)|(^\\d{2}-\\d{7}$)",
+    "description": "SSN & Tax ID combo pattern"
+  },
+  "MANumber": {
+    "type": "string",
+    "pattern": "(^\\d{9}$)|(^$)",
+    "description": "MA number pattern"
+  },
+  "TaxIdNumber": {
+    "type": "string",
+    "pattern": "(^\\d{2}-\\d{7}$)|(^$)",
+    "description": "Tax ID number pattern"
+  }
+}

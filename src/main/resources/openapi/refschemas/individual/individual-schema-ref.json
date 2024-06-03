@@ -1,0 +1,347 @@
+{
+  "Individual": {
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "personalInfo": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "$ref": "../common/common-schema-ref.json#/Identification"
+              },
+              "alias": {
+                "type": "array",
+                "items": {
+                  "$ref": "../common/common-schema-ref.json#/Identification"
+                }
+              },
+              "gender": {
+                "type": "string",
+                "enum": [
+                  "male",
+                  "female",
+                  "other"
+                ],
+                "description": "Gender of the provider."
+              },
+              "dateOfBirth": {
+                "type": "string",
+                "pattern": "(^(0[1-9]|1[0-2])\\/(0[1-9]|[12][0-9]|3[01])\\/\\d{4}$)|(^$)",
+                "description": "Date of birth of the provider."
+              },
+              "email": {
+                "type": "string",
+                "description": "Email address of the provider.",
+                "pattern": "(^(?=.{5,254}$)(?:[^<>()\\[\\]\\\\.,;:\\s@\"]+(?:[._-](?![._-])[^<>()\\[\\]\\\\.,;:\\s@\"]+)*|\"(?:[\\x01-\\x08\\x0B\\x0C\\x0E-\\x1F\\x21\\x23-\\x5B\\x5D-\\x7F]|\\\\[\\x01-\\x09\\x0B\\x0C\\x0E-\\x7F])*\")@[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.(com|org|gov|edu|net|mil)$)|(^$)"
+              },
+              "socialSecurityNumber": {
+                "type": "string",
+                "pattern": "(^\\d{3}-\\d{2}-\\d{4}$)|(^$)",
+                "description": "Social Security Number of the provider."
+              },
+              "W9": {
+                "$ref": "../common/common-schema-ref.json#/FileAttachment"
+              },
+              "taxIDLetter": {
+                "$ref": "../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "addressInfo": {
+            "$ref": "../common/common-schema-ref.json#/AddressInfo"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "contactInfo": {
+            "$ref": "../common/common-schema-ref.json#/ContactInfo"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "providerInfo": {
+            "type": "object",
+            "properties": {
+              "doingBusinessAsName": {
+                "type": "string",
+                "pattern": "(^[a-zA-Z0-9@#&,\\-./' ]*$)|(^$)"
+              },
+              "DBA": {
+                "$ref": "../common/common-schema-ref.json#/FileAttachment"
+              },
+              "TTYNumber": {
+                "type": "string",
+                "pattern": "(^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[-]\\d{3}[-]\\d{4}$)|(^$)"
+              },
+              "SDATNumber": {
+                "type": "string",
+                "pattern": "(^[D|E|F|W|L|Z]\\d{8}$)|(^$)"
+              },
+              "practiceURL": {
+                "type": "string",
+                "pattern": "(^https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_.~#?&//=]*)?$)|(^$)"
+              },
+              "ADAAccessible": {
+                "type": "boolean"
+              },
+              "locationPhoneNumber": {
+                "$ref": "../common/common-pattern-ref.json#/PhoneNumber"
+              },
+              "locationPhoneNumberExt": {
+                "$ref": "../common/common-pattern-ref.json#/Extension"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "logisticInfo": {
+            "type": "object",
+            "properties": {
+              "locationHours": {
+                "$ref": "../common/common-schema-ref.json#/LocationHours"
+              },
+              "logistics": {
+                "$ref": "../common/common-schema-ref.json#/Logistics"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "affiliationInfo": {
+            "type": "object",
+            "properties": {
+              "affiliations": {
+                "type": "array",
+                "description": "A list of affiliations for the practitioner.",
+                "items": {
+                  "$ref": "../common/common-schema-ref.json#/IndividualAndRenderingAffiliationsTable"
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "adverseActionInfo": {
+            "properties": {
+              "commonActions": {
+                "$ref": "../common/common-schema-ref.json#/AdverseActions"
+              },
+              "additionalActions": {
+                "$ref": "../common/common-schema-ref.json#/AdditionalActions"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "finesAndDebtsInfo": {
+            "$ref": "../common/common-schema-ref.json#/FinesAndDebts"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "significantTransactionInfo": {
+            "$ref": "../common/common-schema-ref.json#/SignificantTransactions"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "subcontractorInfo": {
+            "$ref": "../common/common-schema-ref.json#/Subcontractors"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "stateLicenses": {
+            "$ref": "../common/common-schema-ref.json#/StateLicenses"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "taxonomyInfo": {
+            "$ref": "#/IndividualTaxonomy"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "additionalCertifications": {
+            "$ref": "#/IndividualAdditionalCertifications"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "supportingInfo": {
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "addenda/individual-pt22-schema-ref.json#/IndividualPT22"
+              },
+              {
+                "$ref": "addenda/individual-pt23-schema-ref.json#/IndividualPT23"
+              },
+              {
+                "$ref": "addenda/individual-pt80-schema-ref.json#/IndividualPT80"
+              },
+              {
+                "$ref": "addenda/individual-pt89-schema-ref.json#/IndividualPT89"
+              },
+              {
+                "$ref": "addenda/individual-pt20-schema-ref.json#/IndividualPT20"
+              },
+              {
+                "$ref": "addenda/individual-ptdl-schema-ref.json#/IndividualPTDL"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  },
+  "IndividualAdditionalCertifications": {
+    "type": "object",
+    "properties": {
+      "labServicesInfo": {
+        "$ref": "#/IndividualLabServicesInfo"
+      },
+      "DEAInfo": {
+        "$ref": "../common/common-schema-ref.json#/DEAInfo"
+      }
+    },
+    "additionalProperties": false
+  },
+  "IndividualLabServicesInfo": {
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "willBillForLabServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "willBillForLabServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "CLIAInfo": {
+            "$ref": "../common/common-schema-ref.json#/CLIAInfo"
+          },
+          "labPermitInfo": {
+            "$ref": "../common/common-schema-ref.json#/LabPermitInfo"
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  },
+  "IndividualTaxonomy": {
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "taxonomyAndSpeciality": {
+            "$ref": "../common/common-schema-ref.json#/TaxonomyAndSpeciality"
+          },
+          "hasSpecializedLicensesOrCertificates": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "attachCertificate": {
+            "$ref": "../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "taxonomyAndSpeciality": {
+            "$ref": "../common/common-schema-ref.json#/TaxonomyAndSpeciality"
+          },
+          "hasSpecializedLicensesOrCertificates": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "taxonomyAndSpeciality": {
+            "$ref": "../common/common-schema-ref.json#/TaxonomyAndSpeciality"
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "RenderingPTORP": {
+    "type": "object",
+    "title": "Physician Assistant",
+    "properties": {
+      "initialAttestation": {
+        "type": "boolean"
+      },
+      "providerInitials": {
+        "type": "string",
+        "pattern": "^[A-Za-z]+$"
+      }
+    },
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "CheckExpirationDatesResponse": {
+    "type": "object",
+    "properties": {
+      "sections": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "jsonPath": {
+              "type": "string",
+              "description": "Fully qualified address of date within application JSON document"
+            },
+            "date": {
+              "type": "string",
+              "pattern": "^(\\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$",
+              "description": "Date in YYYY-MM-DD format"
+            },
+            "expired": {
+              "type": "boolean",
+              "description": "Whether the date is expired."
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "additionalProperties": false
+  }
+}

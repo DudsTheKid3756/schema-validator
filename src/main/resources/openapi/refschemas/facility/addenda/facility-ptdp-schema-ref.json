@@ -1,0 +1,227 @@
+{
+  "FacilityPTDP": {
+    "title": "Diabetes Prevention Program Certification Information (Facility)",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "hasDPRPCertification": {
+            "type": "boolean",
+            "description": "Whether the facility has obtained CDC DPRP Certification."
+          },
+          "willNotifyMDHAnyChangeIn30Days": {
+            "type": "boolean",
+            "description": "Whether the facility will notify MDH of any change in DPRP recognition status within 30 days."
+          },
+          "recognitionStatus": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "Pending"
+                ]
+              },
+              "effectiveDate": {
+                "$ref": "../../common/common-pattern-ref.json#/Date"
+              },
+              "attachment": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          },
+          "CDCApprovedDeliveryMode": {
+            "type": "string",
+            "enum": [
+              "In-Person",
+              "Online",
+              "Distance Learning",
+              "Combination"
+            ],
+            "description": "The CDC approved delivery mode for the DPRP."
+          },
+          "hasDocumentationOfDPRPStatus": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "attachDPRPDocumentation": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "attestations": {
+            "$ref": "../../common/addenda/attestations-subschema-ref.json#/Attestations"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "hasDPRPCertification": {
+            "type": "boolean",
+            "description": "Whether the facility has obtained CDC DPRP Certification."
+          },
+          "willNotifyMDHAnyChangeIn30Days": {
+            "type": "boolean",
+            "description": "Whether the facility will notify MDH of any change in DPRP recognition status within 30 days."
+          },
+          "recognitionStatus": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "Pending"
+                ]
+              },
+              "effectiveDate": {
+                "$ref": "../../common/common-pattern-ref.json#/Date"
+              },
+              "attachment": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          },
+          "CDCApprovedDeliveryMode": {
+            "type": "string",
+            "enum": [
+              "In-Person",
+              "Online",
+              "Distance Learning",
+              "Combination"
+            ],
+            "description": "The CDC approved delivery mode for the DPRP."
+          },
+          "hasDocumentationOfDPRPStatus": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "reasonNoDPRPDocumentationStatus": {
+            "type": "string",
+            "description": " Please explain why?"
+          },
+          "attestations": {
+            "$ref": "../../common/addenda/attestations-subschema-ref.json#/Attestations"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "hasDPRPCertification": {
+            "type": "boolean",
+            "description": "Whether the facility has obtained CDC DPRP Certification."
+          },
+          "willNotifyMDHAnyChangeIn30Days": {
+            "type": "boolean",
+            "description": "Whether the facility will notify MDH of any change in DPRP recognition status within 30 days."
+          },
+          "recognitionStatus": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "Preliminary Recognition",
+                  "Full Recognition"
+                ]
+              },
+              "expirationOrRecertificationDate": {
+                "$ref": "../../common/common-pattern-ref.json#/Date"},
+              "attachment": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          },
+          "CDCApprovedDeliveryMode": {
+            "type": "string",
+            "enum": [
+              "In-Person",
+              "Online",
+              "Combination",
+              "Distance Learning"
+            ],
+            "description": "The CDC approved delivery mode for the DPRP."
+          },
+          "hasDocumentationOfDPRPStatus": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "reasonNoDPRPDocumentationStatus": {
+            "type": "string",
+            "description": " Please explain why?"
+          },
+          "attestations": {
+            "$ref": "../../common/addenda/attestations-subschema-ref.json#/Attestations"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "hasDPRPCertification": {
+            "type": "boolean",
+            "description": "Whether the facility has obtained CDC DPRP Certification."
+          },
+          "willNotifyMDHAnyChangeIn30Days": {
+            "type": "boolean",
+            "description": "Whether the facility will notify MDH of any change in DPRP recognition status within 30 days."
+          },
+          "recognitionStatus": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "Preliminary Recognition",
+                  "Full Recognition"
+                ]
+              },
+              "expirationOrRecertificationDate": {
+                "$ref": "../../common/common-pattern-ref.json#/Date"
+              },
+              "attachment": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          },
+          "CDCApprovedDeliveryMode": {
+            "type": "string",
+            "enum": [
+              "In-Person",
+              "Online",
+              "Combination",
+              "Distance Learning"
+            ],
+            "description": "The CDC approved delivery mode for the DPRP."
+          },
+          "hasDocumentationOfDPRPStatus": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "attachDPRPDocumentation": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "attestations": {
+            "$ref": "../../common/addenda/attestations-subschema-ref.json#/Attestations"
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

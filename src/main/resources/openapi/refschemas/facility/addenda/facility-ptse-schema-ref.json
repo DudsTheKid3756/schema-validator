@@ -1,0 +1,18 @@
+{
+  "FacilityPTSE": {
+    "title": "Supported Employment",
+    "type": "object",
+    "properties": {
+      "allProfessionals": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+        }
+      },
+      "criminalHistoryPolicy": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      }
+    },
+    "additionalProperties": false
+  }
+}

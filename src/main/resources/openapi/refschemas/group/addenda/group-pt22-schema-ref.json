@@ -1,0 +1,35 @@
+{
+  "GroupPT22": {
+    "title": "Nurse Midwives",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "providesCenteringPregnancyServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "centeringPregnancyApprovalLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "providesCenteringPregnancyServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

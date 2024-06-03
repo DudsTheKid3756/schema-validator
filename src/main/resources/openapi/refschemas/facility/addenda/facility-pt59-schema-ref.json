@@ -1,0 +1,59 @@
+{
+  "FacilityPT59": {
+    "title": "Portable X-Ray",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "radiationMachineFacilityRegistration": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "CMSMedicareApprovalLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "renderingMammographyServices": {
+            "type": "object",
+            "properties": {
+              "hasRenderingMammographyServices": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "radiationMachineFacilityRegistration": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "CMSMedicareApprovalLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "renderingMammographyServices": {
+            "type": "object",
+            "properties": {
+              "hasRenderingMammographyServices": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "FDALetterOfCertification": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

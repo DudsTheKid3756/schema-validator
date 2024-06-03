@@ -1,0 +1,275 @@
+{
+  "Rendering": {
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "personalInfo": {
+            "$ref": "../common/common-schema-ref.json#/PersonalInfo"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "addressInfo": {
+            "type": "object",
+            "properties": {
+              "correspondenceAddress": {
+                "$ref": "../common/common-schema-ref.json#/Address"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "contactInfo": {
+            "type": "object",
+            "properties": {
+              "enrollmentContact": {
+                "$ref": "../common/common-schema-ref.json#/Contact"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "logisticInfo": {
+            "type": "object",
+            "properties": {
+              "logistics": {
+                "$ref": "../common/common-schema-ref.json#/Logistics"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "affiliationInfo": {
+            "type": "object",
+            "properties": {
+              "affiliations": {
+                "type": "array",
+                "description": "A list of affiliations for the practitioner.",
+                "items": {
+                  "$ref": "../common/common-schema-ref.json#/IndividualAndRenderingAffiliationsTable"
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "adverseActionInfo": {
+            "properties": {
+              "commonActions": {
+                "$ref": "../common/common-schema-ref.json#/AdverseActions"
+              },
+              "additionalActions": {
+                "$ref": "../common/common-schema-ref.json#/AdditionalActions"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "finesAndDebtsInfo": {
+            "$ref": "../common/common-schema-ref.json#/FinesAndDebts"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "significantTransactionInfo": {
+            "$ref": "../common/common-schema-ref.json#/SignificantTransactions"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "stateLicenses": {
+            "anyOf": [
+              {
+                "$ref": "../common/common-schema-ref.json#/StateLicenses"
+              },
+              {
+                "$ref": "#/RenderingORPLicense"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "taxonomyInfo": {
+            "$ref": "#/RenderingTaxonomy"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "additionalCertifications": {
+            "$ref": "#/RenderingAdditionalCertifications"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "supportingInfo": {
+            "anyOf": [
+              {
+                "$ref": "addenda/rendering-ptdl-schema-ref.json#/RenderingPTDL"
+              },
+              {
+                "$ref": "addenda/rendering-pt23-schema-ref.json#/RenderingPT23"
+              },
+              {
+                "$ref": "addenda/rendering-pt20-schema-ref.json#/RenderingPT20"
+              },
+              {
+                "$ref": "addenda/rendering-pt22-schema-ref.json#/RenderingPT22"
+              },
+              {
+                "$ref": "addenda/rendering-pt80-schema-ref.json#/RenderingPT80"
+              },
+              {
+                "$ref": "addenda/rendering-pt89-schema-ref.json#/RenderingPT89"
+              },
+              {
+                "$ref": "addenda/rendering-ptorp-schema-ref.json#/RenderingPTORP"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  },
+  "RenderingORPLicense": {
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "isFullyLicensedProvider": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "fellowShipOrResidenceLetter": {
+            "$ref": "../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "isFullyLicensedProvider": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "stateLicenses": {
+            "type": "array",
+            "items": {
+              "$ref": "../common/common-schema-ref.json#/StateLicenseInfo"
+            },
+            "minItems": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  },
+  "RenderingAdditionalCertifications": {
+    "type": "object",
+    "properties": {
+      "DEAInfo": {
+        "$ref": "../common/common-schema-ref.json#/DEAInfo"
+      }
+    },
+    "additionalProperties": false
+  },
+  "RenderingTaxonomy": {
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "taxonomyAndSpeciality": {
+            "$ref": "../common/common-schema-ref.json#/TaxonomyAndSpeciality"
+          },
+          "hasSpecializedLicensesOrCertificates": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "attachCertificate": {
+            "$ref": "../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "taxonomyAndSpeciality": {
+            "$ref": "../common/common-schema-ref.json#/TaxonomyAndSpeciality"
+          },
+          "hasSpecializedLicensesOrCertificates": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "taxonomyAndSpeciality": {
+            "$ref": "../common/common-schema-ref.json#/TaxonomyAndSpeciality"
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

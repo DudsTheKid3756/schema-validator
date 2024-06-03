@@ -1,0 +1,503 @@
+{
+  "FacilityPTVC": {
+    "title": "HIV Case Management",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "multiDisciplinaryTeamDetails": {
+            "type": "array",
+            "description": "Details about the members of the multidisciplinary team involved in HIV case management, including their qualifications and licenses.",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "writtenAgreements": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "DESProvider": {
+            "type": "object",
+            "properties": {
+              "diagnosticEvaluationServicesProvider": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "DESProviderAttestation": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          },
+          "ongoingCaseManagementProvider": {
+            "type": "object",
+            "properties": {
+              "hasOngoingCaseManagementProvider": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "ongoingCaseManagementProviderAttestation": {
+                "type": "boolean"
+              }
+            }
+          },
+          "agreementOfUnderstanding": {
+            "type": "boolean",
+            "description": "Indicates whether there is an agreement or memorandum of understanding in place with any relevant parties regarding the provision of HIV case management services."
+          },
+          "agencyAdditionalAgreements": {
+            "type": "object",
+            "properties": {
+              "hasAgencyAdditionalAgreements": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "agencyAdditionalAgreementsAttestation": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "multiDisciplinaryTeamDetails": {
+            "type": "array",
+            "description": "Details about the members of the multidisciplinary team involved in HIV case management, including their qualifications and licenses.",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "writtenAgreements": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "DESProvider": {
+            "type": "object",
+            "properties": {
+              "diagnosticEvaluationServicesProvider": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "DESProviderAttestation": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          },
+          "ongoingCaseManagementProvider": {
+            "type": "object",
+            "properties": {
+              "hasOngoingCaseManagementProvider": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            }
+          },
+          "agreementOfUnderstanding": {
+            "type": "boolean",
+            "description": "Indicates whether there is an agreement or memorandum of understanding in place with any relevant parties regarding the provision of HIV case management services."
+          },
+          "agencyAdditionalAgreements": {
+            "type": "object",
+            "properties": {
+              "hasAgencyAdditionalAgreements": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "multiDisciplinaryTeamDetails": {
+            "type": "array",
+            "description": "Details about the members of the multidisciplinary team involved in HIV case management, including their qualifications and licenses.",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "writtenAgreements": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "DESProvider": {
+            "type": "object",
+            "properties": {
+              "diagnosticEvaluationServicesProvider": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "DESProviderAttestation": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          },
+          "ongoingCaseManagementProvider": {
+            "type": "object",
+            "properties": {
+              "hasOngoingCaseManagementProvider": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "ongoingCaseManagementProviderAttestation": {
+                "type": "boolean"
+              }
+            }
+          },
+          "agreementOfUnderstanding": {
+            "type": "boolean",
+            "description": "Indicates whether there is an agreement or memorandum of understanding in place with any relevant parties regarding the provision of HIV case management services."
+          },
+          "agencyAdditionalAgreements": {
+            "type": "object",
+            "properties": {
+              "hasAgencyAdditionalAgreements": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "multiDisciplinaryTeamDetails": {
+            "type": "array",
+            "description": "Details about the members of the multidisciplinary team involved in HIV case management, including their qualifications and licenses.",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "writtenAgreements": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "DESProvider": {
+            "type": "object",
+            "properties": {
+              "diagnosticEvaluationServicesProvider": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "DESProviderAttestation": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          },
+          "ongoingCaseManagementProvider": {
+            "type": "object",
+            "properties": {
+              "hasOngoingCaseManagementProvider": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            }
+          },
+          "agreementOfUnderstanding": {
+            "type": "boolean",
+            "description": "Indicates whether there is an agreement or memorandum of understanding in place with any relevant parties regarding the provision of HIV case management services."
+          },
+          "agencyAdditionalAgreements": {
+            "type": "object",
+            "properties": {
+              "hasAgencyAdditionalAgreements": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "agencyAdditionalAgreementsAttestation": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "multiDisciplinaryTeamDetails": {
+            "type": "array",
+            "description": "Details about the members of the multidisciplinary team involved in HIV case management, including their qualifications and licenses.",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "writtenAgreements": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "DESProvider": {
+            "type": "object",
+            "properties": {
+              "diagnosticEvaluationServicesProvider": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "ongoingCaseManagementProvider": {
+            "type": "object",
+            "properties": {
+              "hasOngoingCaseManagementProvider": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              },
+              "ongoingCaseManagementProviderAttestation": {
+                "type": "boolean"
+              }
+            }
+          },
+          "agreementOfUnderstanding": {
+            "type": "boolean",
+            "description": "Indicates whether there is an agreement or memorandum of understanding in place with any relevant parties regarding the provision of HIV case management services."
+          },
+          "agencyAdditionalAgreements": {
+            "type": "object",
+            "properties": {
+              "hasAgencyAdditionalAgreements": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "agencyAdditionalAgreementsAttestation": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "multiDisciplinaryTeamDetails": {
+            "type": "array",
+            "description": "Details about the members of the multidisciplinary team involved in HIV case management, including their qualifications and licenses.",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "writtenAgreements": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "DESProvider": {
+            "type": "object",
+            "properties": {
+              "diagnosticEvaluationServicesProvider": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "ongoingCaseManagementProvider": {
+            "type": "object",
+            "properties": {
+              "hasOngoingCaseManagementProvider": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            }
+          },
+          "agreementOfUnderstanding": {
+            "type": "boolean",
+            "description": "Indicates whether there is an agreement or memorandum of understanding in place with any relevant parties regarding the provision of HIV case management services."
+          },
+          "agencyAdditionalAgreements": {
+            "type": "object",
+            "properties": {
+              "hasAgencyAdditionalAgreements": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "multiDisciplinaryTeamDetails": {
+            "type": "array",
+            "description": "Details about the members of the multidisciplinary team involved in HIV case management, including their qualifications and licenses.",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "writtenAgreements": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "DESProvider": {
+            "type": "object",
+            "properties": {
+              "diagnosticEvaluationServicesProvider": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "ongoingCaseManagementProvider": {
+            "type": "object",
+            "properties": {
+              "hasOngoingCaseManagementProvider": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "ongoingCaseManagementProviderAttestation": {
+                "type": "boolean"
+              }
+            }
+          },
+          "agreementOfUnderstanding": {
+            "type": "boolean",
+            "description": "Indicates whether there is an agreement or memorandum of understanding in place with any relevant parties regarding the provision of HIV case management services."
+          },
+          "agencyAdditionalAgreements": {
+            "type": "object",
+            "properties": {
+              "hasAgencyAdditionalAgreements": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "multiDisciplinaryTeamDetails": {
+            "type": "array",
+            "description": "Details about the members of the multidisciplinary team involved in HIV case management, including their qualifications and licenses.",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "writtenAgreements": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "DESProvider": {
+            "type": "object",
+            "properties": {
+              "diagnosticEvaluationServicesProvider": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "ongoingCaseManagementProvider": {
+            "type": "object",
+            "properties": {
+              "hasOngoingCaseManagementProvider": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "ongoingCaseManagementProviderAttestation": {
+                "type": "boolean"
+              }
+            }
+          },
+          "agreementOfUnderstanding": {
+            "type": "boolean",
+            "description": "Indicates whether there is an agreement or memorandum of understanding in place with any relevant parties regarding the provision of HIV case management services."
+          },
+          "agencyAdditionalAgreements": {
+            "type": "object",
+            "properties": {
+              "hasAgencyAdditionalAgreements": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "agencyAdditionalAgreementsAttestation": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

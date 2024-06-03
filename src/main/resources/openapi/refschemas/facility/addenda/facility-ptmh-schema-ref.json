@@ -1,0 +1,42 @@
+{
+  "FacilityPTMH": {
+    "title": "Community Based Partial Hospitalization Program",
+    "type": "object",
+    "properties": {
+      "programDirector": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+        }
+      },
+      "multidisciplinaryTeam": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+        }
+      },
+      "psychiatrist": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+        }
+      },
+      "registeredNurse": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+        }
+      },
+      "otherProfessionals": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+        }
+      },
+      "criminalHistoryPolicy": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      }
+    },
+    "additionalProperties": false
+  }
+}

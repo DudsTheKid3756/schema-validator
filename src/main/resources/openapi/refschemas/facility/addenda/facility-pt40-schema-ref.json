@@ -1,0 +1,170 @@
+{
+  "FacilityPT40": {
+    "title": "Autism Waiver",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "attendedMSDEAutismWaiverTraining": {
+            "description": "Indicates whether the applicant has attended the MSDE Autism Waiver Training.",
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "dateAttendedMSDEAutismWaiverTraining": {
+            "$ref": "../../common/common-pattern-ref.json#/Date"
+          },
+          "generalConditions": {
+            "description": "Contains general conditions related to the provider's participation.",
+            "type": "object",
+            "properties": {
+              "meetsAllConditions": {
+                "description": "Confirms that the applicant meets all the conditions for participation as outlined in COMAR 10.09.36.",
+                "type": "boolean"
+              },
+              "agreedProvideServices": {
+                "description": "Indicates agreement to provide services according to the waiver proposal and regulations.",
+                "type": "boolean"
+              },
+              "hasSignedProviderAgreement": {
+                "description": "Confirms that a signed provider agreement with the Medical Assistance program is in effect.",
+                "type": "boolean"
+              },
+              "notSuspendedOrRemoved": {
+                "description": "Confirms that the applicant has not been suspended or removed from Medicaid participation in the last 24 months.",
+                "type": "boolean"
+              },
+              "haveNotUndergoneImpositionNoCitedDeficienciesNotExperiencedTermination": {
+                "type": "boolean"
+              },
+              "noLicenseOrCertificationRevoked": {
+                "type": "boolean"
+              },
+              "maintainDetailedWrittenRecords": {
+                "description": "Indicates commitment to maintain detailed records of services provided to waiver participants.",
+                "type": "boolean"
+              },
+              "makeAvailableToDepartmentAndFederalFundingAgentAllRecords": {
+                "type": "boolean"
+              },
+              "agreeNotToSuspendTerminateIncreaseOrReduceServices": {
+                "type": "boolean"
+              },
+              "agreeToInformMSDE": {
+                "type": "boolean"
+              },
+              "provideDocumentationRequired": {
+                "type": "boolean"
+              },
+              "attendAdditionalWaiverTrainings": {
+                "type": "boolean"
+              },
+              "maintainGeneralLiabilityInsurance": {
+                "type": "boolean"
+              },
+              "agreeToNotifyCPS": {
+                "type": "boolean"
+              },
+              "agreeToProvideMonthlyReportOnEBCFromCJIS": {
+                "type": "boolean"
+              },
+              "agreeToComplyWithRequirements": {
+                "type": "boolean"
+              },
+              "jurisdictions": {
+                "$ref": "../../common/addenda/jurisdictions-subschema-ref.json#/Jurisdictions"
+              }
+            },
+            "additionalProperties": false
+          },
+          "waiverServices": {
+            "$ref": "../../common/addenda/waiver-services-subschema-ref.json#/WaiverServices"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "attendedMSDEAutismWaiverTraining": {
+            "description": "Indicates whether the applicant has attended the MSDE Autism Waiver Training.",
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "generalConditions": {
+            "description": "Contains general conditions related to the provider's participation.",
+            "type": "object",
+            "properties": {
+              "meetsAllConditions": {
+                "description": "Confirms that the applicant meets all the conditions for participation as outlined in COMAR 10.09.36.",
+                "type": "boolean"
+              },
+              "agreedProvideServices": {
+                "description": "Indicates agreement to provide services according to the waiver proposal and regulations.",
+                "type": "boolean"
+              },
+              "hasSignedProviderAgreement": {
+                "description": "Confirms that a signed provider agreement with the Medical Assistance program is in effect.",
+                "type": "boolean"
+              },
+              "notSuspendedOrRemoved": {
+                "description": "Confirms that the applicant has not been suspended or removed from Medicaid participation in the last 24 months.",
+                "type": "boolean"
+              },
+              "haveNotUndergoneImpositionNoCitedDeficienciesNotExperiencedTermination": {
+                "type": "boolean"
+              },
+              "noLicenseOrCertificationRevoked": {
+                "type": "boolean"
+              },
+              "maintainDetailedWrittenRecords": {
+                "description": "Indicates commitment to maintain detailed records of services provided to waiver participants.",
+                "type": "boolean"
+              },
+              "makeAvailableToDepartmentAndFederalFundingAgentAllRecords": {
+                "type": "boolean"
+              },
+              "agreeNotToSuspendTerminateIncreaseOrReduceServices": {
+                "type": "boolean"
+              },
+              "agreeToInformMSDE": {
+                "type": "boolean"
+              },
+              "provideDocumentationRequired": {
+                "type": "boolean"
+              },
+              "attendAdditionalWavierTrainings": {
+                "type": "boolean"
+              },
+              "maintainGeneralLiabilityInsurance": {
+                "type": "boolean"
+              },
+              "agreeToNotifyCPS": {
+                "type": "boolean"
+              },
+              "agreeToProvideMonthlyReportOnEBCFromCJIS": {
+                "type": "boolean"
+              },
+              "agreeToComplyWithRequirements": {
+                "type": "boolean"
+              },
+              "jurisdictions": {
+                "$ref": "../../common/addenda/jurisdictions-subschema-ref.json#/Jurisdictions"
+              }
+            },
+            "additionalProperties": false
+          },
+          "waiverServices": {
+            "$ref": "../../common/addenda/waiver-services-subschema-ref.json#/WaiverServices"
+          }
+
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

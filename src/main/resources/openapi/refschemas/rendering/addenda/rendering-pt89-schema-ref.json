@@ -1,0 +1,49 @@
+{
+  "RenderingPT89": {
+    "title": "HG 1915i (Rendering)",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "therapyServices": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/addenda/service-option-pt89-subschema-ref.json#/ServiceOptionPT89"
+            }
+          },
+          "BHAProviderApplication": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Indicates that the BHA Provider Application has been completed."
+          },
+          "BHAProviderApplicationDocument": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "therapyServices": {
+            "type": "array",
+            "items": {
+              "$ref": "../../common/addenda/service-option-pt89-subschema-ref.json#/ServiceOptionPT89"
+            }
+          },
+          "BHAProviderApplication": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Indicates that the BHA Provider Application has not been completed."
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

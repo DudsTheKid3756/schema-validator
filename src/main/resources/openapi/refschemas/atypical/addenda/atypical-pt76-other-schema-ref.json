@@ -1,0 +1,457 @@
+{
+  "AtypicalPT76-O":  {
+    "title": "Community Options - OTHER",
+    "type": "object",
+    "properties": {
+      "services": {
+        "type": "object",
+        "properties": {
+          "personalAssistanceServices": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasPersonalAssistanceServices": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "attachCopyOfNonExpiresRSAL": {
+                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                  },
+                  "attachMedicationAdministration": {
+                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                  },
+                  "staffingRequirement": {
+                    "type": "object",
+                    "properties": {
+                      "registeredNurse": {
+                        "$ref": "../../common/addenda/employeeDetails-subschema-ref.json#/EmployeeDetails"
+                      },
+                      "CNA": {
+                        "$ref": "../../common/addenda/employeeDetails-subschema-ref.json#/EmployeeDetails"
+                      },
+                      "CMT": {
+                        "$ref": "../../common/addenda/employeeDetails-subschema-ref.json#/EmployeeDetails"
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasPersonalAssistanceServices": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "accessibilityAdaptations": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasAccessibilityAdaptations": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "attachProofVendorOrSells": {
+                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                  },
+                  "attachTradeOrMHICLicense": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "attachProofOfLiabilityInsurance": {
+                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasAccessibilityAdaptations": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "assistiveTechnology": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasAssistiveTechnology": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "attachProofVendorOrSells": {
+                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                  },
+                  "attachTradeOrMHICLicense": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "attachProofOfLiabilityInsurance": {
+                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasAssistiveTechnology": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "behavioralHealthConsultation": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasBehavioralHealthConsultation": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "attachProofVendorOrSells": {
+                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasBehavioralHealthConsultation": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "consumerTraining": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasConsumerTraining": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "attachProofVendorOrSells": {
+                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                  },
+                  "attachTaxIDOrTradeOrMHICLicenseAndLiabilityInsurance": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasConsumerTraining": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "dietitianAndNutrition": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasDietitianAndNutrition": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "attachProofVendorOrSells": {
+                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                  },
+                  "attachTaxIDOrTradeOrMHICLicenseAndLiabilityInsurance": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasDietitianAndNutrition": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "environmentalAssessments": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasEnvironmentalAssessments": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "attachProofVendorOrSells": {
+                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                  },
+                  "attachTradeOrMHICLicense": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "attachProofOfLiabilityInsurance": {
+                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasEnvironmentalAssessments": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "familyTraining": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasFamilyTraining": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "attachProofVendorOrSells": {
+                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                  },
+                  "attachTaxIDOrTradeOrMHICLicenseAndLiabilityInsurance": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasFamilyTraining": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "homeDeliveredMeals": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasHomeDeliveredMeals": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "attachProofVendorOrSells": {
+                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                  },
+                  "attachTaxIDOrTradeOrMHICLicenseAndLiabilityInsurance": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasHomeDeliveredMeals": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "personalEmergencyResponseSystems": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasPersonalEmergencyResponseSystems": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "attachProofVendorOrSells": {
+                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                  },
+                  "attachTradeOrMHICLicense": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "attachProofOfLiabilityInsurance": {
+                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasPersonalEmergencyResponseSystems": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "seniorCenterPlus": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasSeniorCenterPlus": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "attachProofVendorOrSells": {
+                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                  },
+                  "attachTaxIDOrTradeOrMHICLicenseAndLiabilityInsurance": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasSeniorCenterPlus": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "jurisdictions": {
+        "$ref": "../../common/addenda/jurisdictions-subschema-ref.json#/Jurisdictions"
+      },
+      "generalConditionsForProviderParticipation": {
+        "$ref": "../../common/addenda/providerParticipation-subschema-ref.json#/ProviderParticipation"
+      }
+    },
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "Staff": {
+    "type": "object",
+    "properties": {
+      "assistedLivingManager": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string",
+              "title": "First Name"
+            },
+            "lastName": {
+              "type": "string",
+              "title": "Last Name"
+            },
+            "assistedLivingManagementTraining": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "resume": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "medicationTechnicianCertification": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "CPRCertificate": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "firstAidCertification": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "criminalBackgroundCheck": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "anyAdditionalCertification": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "alternateAssistedLivingManager": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string",
+              "title": "First Name"
+            },
+            "lastName": {
+              "type": "string",
+              "title": "Last Name"
+            },
+            "assistedLivingManagementTraining": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "resume": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "medicationTechnicianCertification": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "CPRCertificate": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "firstAidCertification": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "criminalBackgroundCheck": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "anyAdditionalCertification": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "registeredNurse": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string",
+              "title": "First Name"
+            },
+            "lastName": {
+              "type": "string",
+              "title": "Last Name"
+            },
+            "assistedLivingManagementTraining": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "professionalLicense": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "CPRCertificate": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "criminalBackgroundCheck": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "delegatedNurse": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string",
+              "title": "First Name"
+            },
+            "lastName": {
+              "type": "string",
+              "title": "Last Name"
+            },
+            "delegatedNurseLicense": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "verificationOfCompletionDelegatedNurseCurriculum": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "delegatedNurseContract": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "criminalBackgroundCheck": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "allEmployees": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string",
+              "title": "First Name"
+            },
+            "lastName": {
+              "type": "string",
+              "title": "Last Name"
+            },
+            "criminalBackgroundCheck": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "firstAidCertification": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "CPRCertificate": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "medicationTechnicianCertification": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "twoFormOfID": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            },
+            "anyAdditionalCertification": {
+              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "additionalProperties": false
+  }
+}

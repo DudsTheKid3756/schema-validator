@@ -1,0 +1,122 @@
+{
+  "Crossover": {
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "providerInfo": {
+            "type": "object",
+            "properties": {
+              "W9": {
+                "$ref": "../common/common-schema-ref.json#/FileAttachment"
+              },
+              "taxIDLetter": {
+                "$ref": "../common/common-schema-ref.json#/FileAttachment"
+              },
+              "legalBusinessName": {
+                "type": "string",
+                "description": "The legal business name of the group provider.",
+                "pattern": "(^[a-zA-Z\\s@#&,.!'\\/-]*$)|(^$)"
+              },
+              "doingBusinessAsName": {
+                "type": "string",
+                "pattern": "(^[a-zA-Z0-9@#&,\\-./' ]*$)|(^$)"
+              },
+              "DBA": {
+                "$ref": "../common/common-schema-ref.json#/FileAttachment"
+              },
+              "entityType": {
+                "type": "string",
+                "description": "The type of entity for the group provider."
+              },
+              "SDAT": {
+                "$ref": "../common/common-schema-ref.json#/OptionalSDAT"
+              },
+              "localPhoneNumber": {
+                "$ref": "../common/common-pattern-ref.json#/PhoneNumber"
+              },
+              "extension": {
+                "$ref": "../common/common-pattern-ref.json#/Extension"
+              },
+              "TTYNumber": {
+                "type": "string",
+                "pattern": "((^[0-9]{3}-[0-9]{3}-[0-9]{4}$)|(^$))|(^$)"
+              },
+              "practiceURL": {
+                "type": "string"
+              },
+              "locationADAAccessible": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "addressInfo": {
+            "$ref": "../common/common-schema-ref.json#/AddressInfo"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "contactInfo": {
+            "$ref": "../common/common-schema-ref.json#/ContactInfo"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "licenseAndCertificateInfo": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "attachCMSMedicareApprovalLetter": {
+                    "$ref": "../common/common-schema-ref.json#/FileAttachment"
+                  },
+                  "anyLicenseOrCertificates": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "attachLicenseOrCertificate": {
+                    "$ref": "../common/common-schema-ref.json#/FileAttachment"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "attachCMSMedicareApprovalLetter": {
+                    "$ref": "../common/common-schema-ref.json#/FileAttachment"
+                  },
+                  "anyLicenseOrCertificates": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "GroupPT89": {
+    "title": "HG 1915i (Group)",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "hasCompletedProviderApplication": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Indicates that the user has completed the 1915i BHA Provider Application."
+          },
+          "providerApplicationAttachment": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "hasCompletedProviderApplication": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Indicates that the user has not completed the 1915i BHA Provider Application."
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

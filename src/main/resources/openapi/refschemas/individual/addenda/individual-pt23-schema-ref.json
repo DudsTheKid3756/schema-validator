@@ -1,0 +1,37 @@
+{
+  "IndividualPT23": {
+    "title": "Nurse Practitioners (Individual)",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "providesHealthyStepServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "The provider offers services for HealthySteps."
+          },
+          "centeringHealthyStepsApprovalLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "providesHealthyStepServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "The provider does not offer services for HealthySteps."
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

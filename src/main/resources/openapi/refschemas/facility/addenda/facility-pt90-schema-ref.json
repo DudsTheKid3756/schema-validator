@@ -1,0 +1,256 @@
+{
+  "FacilityPT90": {
+    "title": "Developmental Disabilities Administration (DDA) Services Provider",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "DDAServiceApprovalLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "DDABaseApplication": {
+            "type": "object",
+            "properties": {
+              "hasDDABaseApplication": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "behavioralSupports": {
+                "type": "boolean"
+              },
+              "employmentServices": {
+                "type": "boolean"
+              },
+              "familySupports": {
+                "type": "boolean"
+              },
+              "nursing": {
+                "type": "boolean"
+              },
+              "personalSupports": {
+                "type": "boolean"
+              },
+              "remoteSupportServices": {
+                "type": "boolean"
+              },
+              "sharedLiving": {
+                "type": "boolean"
+              },
+              "vocationalServices": {
+                "type": "boolean"
+              },
+              "organizedHealthCareDeliverySystem": {
+                "type": "boolean"
+              },
+              "housingSupports": {
+                "type": "boolean"
+              },
+              "respiteCareServices": {
+                "type": "boolean"
+              },
+              "supportedLiving": {
+                "type": "boolean"
+              },
+              "targetedCaseManagementServices": {
+                "type": "boolean"
+              },
+              "fiscalManagementAgency": {
+                "type": "boolean"
+              },
+              "communityDevelopmentServices": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          },
+          "DDALicensedApplication": {
+            "properties": {
+              "hasDDALicenseApplication": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "authorizedUnder21": {
+            "type": "boolean",
+            "description": "Indicates whether the provider is authorized to offer services to individuals under the age of 21."
+          },
+          "boardOfDirectors": {
+            "type": "array",
+            "description": "A list of members on the Board of Directors, including their personal details.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "dateOfBirth": {
+                  "$ref": "../../common/common-pattern-ref.json#/Date"
+                },
+                "phone": {
+                  "$ref": "../../common/common-pattern-ref.json#/PhoneNumber"
+                },
+                "email": {
+                  "$ref": "../../common/common-pattern-ref.json#/Email"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "generalConditions": {
+            "type": "object",
+            "properties": {
+              "meetAllConditionsForParticipation": {
+                "type": "boolean"
+              },
+              "meetRegulatoryRequirements": {
+                "type": "boolean"
+              },
+              "verifyQualificationsOfIndividuals": {
+                "type": "boolean"
+              },
+              "complyWithReportableIncidentsPolicy": {
+                "type": "boolean"
+              },
+              "cooperateWithRequiredInspections": {
+                "type": "boolean"
+              },
+              "provideServicesAccordingToRequirements": {
+                "type": "boolean"
+              },
+              "suspendTerminateOrReduceServices": {
+                "type": "boolean"
+              },
+              "workWithRecipient": {
+                "type": "boolean"
+              },
+              "demonstrateComplianceWithPlanOfCorrection": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "DDAServiceApprovalLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "DDABaseApplication": {
+            "properties": {
+              "hasDDABaseApplication": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ],
+                "description": "Indicates that user has completed 1915i BHA Provider Application appropriate to service type."
+              }
+            },
+            "additionalProperties": false
+          },
+          "DDALicensedApplication": {
+            "type": "object",
+            "properties": {
+              "hasDDALicenseApplication": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "licensedCommunityLivingGroupHome": {
+                "type": "boolean"
+              },
+              "respiteCareDaily": {
+                "type": "boolean"
+              },
+              "licensedDDADayHabilitation": {
+                "type": "boolean"
+              },
+              "licensedDDADayCommunityLivingEnhancedSupportServices": {
+                "type": "boolean"
+              },
+              "licensedDDAVocationalServices": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          },
+          "authorizedUnder21": {
+            "type": "boolean"
+          },
+          "boardOfDirectors": {
+            "type": "array",
+            "description": "A list of members on the Board of Directors, including their personal details.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "dateOfBirth": {
+                  "$ref": "../../common/common-pattern-ref.json#/Date"
+                },
+                "phone": {
+                  "$ref": "../../common/common-pattern-ref.json#/PhoneNumber"
+                },
+                "email": {
+                  "$ref": "../../common/common-pattern-ref.json#/Email"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "generalConditions": {
+            "type": "object",
+            "properties": {
+              "meetAllConditionsForParticipation": {
+                "type": "boolean"
+              },
+              "meetRegulatoryRequirements": {
+                "type": "boolean"
+              },
+              "verifyQualificationsOfIndividuals": {
+                "type": "boolean"
+              },
+              "complyWithReportableIncidentsPolicy": {
+                "type": "boolean"
+              },
+              "cooperateWithRequiredInspections": {
+                "type": "boolean"
+              },
+              "provideServicesAccordingToRequirements": {
+                "type": "boolean"
+              },
+              "suspendTerminateOrReduceServices": {
+                "type": "boolean"
+              },
+              "workWithRecipient": {
+                "type": "boolean"
+              },
+              "demonstrateComplianceWithPlanOfCorrection": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

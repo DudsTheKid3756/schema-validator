@@ -1,0 +1,11 @@
+server:
+  port: 8090
+
+application:
+  name: @project.artifactId@
+
+logging:
+  file:
+    name: logs/${application.name}-api.log
+  pattern:
+    level: "%X{correlation.id} %5p"

@@ -1,0 +1,831 @@
+{
+  "AtypicalPT86": {
+    "title": "Brain Injury Waiver",
+    "type": "object",
+    "properties": {
+      "waiverServiceResidentialHabilitation": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "hasWaiverServiceResidentialHabilitation": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ],
+                "description": "Residential Habilitation"
+              },
+              "serviceDescriptionResidential": {
+                "type": "object",
+                "properties": {
+                  "assistanceOfAcquisitionResidential": {
+                    "type": "boolean",
+                    "description": "To accept assistance acquisition and others."
+                  },
+                  "waiverParticipantsResidential": {
+                    "type": "boolean",
+                    "description": "To accept waiver participants and others."
+                  }
+                },
+                "additionalProperties": false
+              },
+              "licensing": {
+                "type": "object",
+                "properties": {
+                  "currentLicense": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfCurrentLicenseResidential": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ],
+                            "description": "Copy of Current Licenses."
+                          },
+                          "attachmentCurrentResidential": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfCurrentLicenseResidential": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ],
+                            "description": "Copy of Current Licenses"
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "programHistory": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasSummaryOfProgramHistoryResidential": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ],
+                            "description": "Summary of Program History."
+                          },
+                          "attachmentProgramResidential": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasSummaryOfProgramHistoryResidential": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ],
+                            "description": "Summary of Program History."
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "currentBrainInjury": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfCurrentBrainInjuryResidential": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ],
+                            "description": "Copy of Current brain Injury"
+                          },
+                          "attachmentCopyOfCurrentResidential": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfCurrentBrainInjuryResidential": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ],
+                            "description": "Copy of Current brain Injury"
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              },
+              "trainingAndCredentialing": {
+                "type": "object",
+                "properties": {
+                  "summaryOfProviderBrain": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasSummaryOfProviderBrainResidential": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ],
+                            "description": "Summary of Provider Brain Injury."
+                          },
+                          "attachmentSummaryResidential": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasSummaryOfProviderBrainResidential": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ],
+                            "description": "Summary of Provider Brain Injury."
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "hasWaiverServiceResidentialHabilitation": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ],
+                "description": "Residential Habilitation"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "waiverServiceDayHabilitation": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "hasWaiverServiceDayHabilitation": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ],
+                "description": "Day Habilitation"
+              },
+              "serviceDescriptionDay": {
+                "type": "object",
+                "properties": {
+                  "assistanceOfAcquisitionDay": {
+                    "type": "boolean",
+                    "description": "To accept assistance acquisition and others."
+                  },
+                  "waiverParticipantsDay": {
+                    "type": "boolean",
+                    "description": "To accept waiver participants and others."
+                  }
+                },
+                "additionalProperties": false
+              },
+              "licensing": {
+                "type": "object",
+                "properties": {
+                  "currentLicense": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfCurrentLicenseDay": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ],
+                            "description": "Copy of Current Licenses."
+                          },
+                          "attachmentDay": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfCurrentLicenseDay": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ],
+                            "description": "Copy of Current Licenses"
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "programHistory": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasSummaryOfProgramHistoryDay": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ],
+                            "description": "Summary of Program History."
+                          },
+                          "attachmentProgramHistoryDay": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasSummaryOfProgramHistoryDay": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ],
+                            "description": "Summary of Program History."
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "currentBrainInjury": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfCurrentBrainInjuryDay": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ],
+                            "description": "Copy of Current brain Injury"
+                          },
+                          "attachmentCurrentBrainDay": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfCurrentBrainInjuryDay": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ],
+                            "description": "Copy of Current brain Injury"
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              },
+              "trainingAndCredentialing": {
+                "type": "object",
+                "properties": {
+                  "summaryOfProviderBrain": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasSummaryOfProviderBrainDay": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ],
+                            "description": "Summary of Provider Brain Injury."
+                          },
+                          "attachmentSummaryOfProviderDay": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasSummaryOfProviderBrain": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ],
+                            "description": "Summary of Provider Brain Injury."
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "hasWaiverServiceDayHabilitation": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ],
+                "description": "Day Habilitation"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "waiverServiceSupportedEmployment": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "hasWaiverServiceSupportedEmployment": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ],
+                "description": "Supported Employment."
+              },
+              "serviceDescriptionEmployment": {
+                "type": "object",
+                "properties": {
+                  "assistanceOfAcquisitionEmployment": {
+                    "type": "boolean",
+                    "description": "To accept assistance acquisition and others."
+                  },
+                  "waiverParticipantsEmployment": {
+                    "type": "boolean",
+                    "description": "To accept waiver participants and others."
+                  }
+                },
+                "additionalProperties": false
+              },
+              "licensing": {
+                "type": "object",
+                "properties": {
+                  "currentLicense": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfCurrentLicenseEmployment": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ],
+                            "description": "Copy of Current Licenses."
+                          },
+                          "attachmentCopyOfCurrentEmployment": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfCurrentLicenseEmployment": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ],
+                            "description": "Copy of Current Licenses"
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "programHistory": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasSummaryOfProgramHistoryEmployment": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ],
+                            "description": "Summary of Program History."
+                          },
+                          "attachmentProgramHistoryEmployment": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasSummaryOfProgramHistoryEmployment": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ],
+                            "description": "Summary of Program History."
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "currentBrainInjury": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfCurrentBrainInjuryEmployment": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ],
+                            "description": "Copy of Current brain Injury"
+                          },
+                          "attachmentCurrentBrainEmployment": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfCurrentBrainInjuryEmployment": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ],
+                            "description": "Copy of Current brain Injury"
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "approvalOfMentalHealth": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfApprovalOfMentalHealthEmployment": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ],
+                            "description": "Copy of approval of Mental Health."
+                          },
+                          "attachmentApprovalOfMentalHealthEmployment": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfApprovalOfMentalHealthEmployment": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ],
+                            "description": "Copy of approval of Mental Health."
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              },
+              "trainingAndCredentialing": {
+                "type": "object",
+                "properties": {
+                  "summaryOfProviderBrain": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasSummaryOfProviderBrainEmployment": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ],
+                            "description": "Summary of Provider Brain Injury."
+                          },
+                          "attachmentSummaryEmployment": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasSummaryOfProviderBrainEmployment": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ],
+                            "description": "Summary of Provider Brain Injury."
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "hasWaiverServiceSupportedEmployment": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ],
+                "description": "Supported Employment."
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "waiverServiceIndividualSupportServices": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "hasWaiverServiceIndividualSupportServices": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ],
+                "description": "Individual Support Services."
+              },
+              "serviceDescriptionIndividual": {
+                "type": "object",
+                "properties": {
+                  "assistanceOfAcquisitionIndividual": {
+                    "type": "boolean",
+                    "description": "To accept assistance acquisition and others."
+                  },
+                  "waiverParticipantsIndividual": {
+                    "type": "boolean",
+                    "description": "To accept waiver participants and others."
+                  }
+                },
+                "additionalProperties": false
+              },
+              "licensing": {
+                "type": "object",
+                "properties": {
+                  "currentLicense": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfCurrentLicenseIndividual": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ],
+                            "description": "Copy of Current Licenses."
+                          },
+                          "attachmentCopyOfCurrentIndividual": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfCurrentLicenseIndividual": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ],
+                            "description": "Copy of Current Licenses"
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "programHistory": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasSummaryOfProgramHistoryIndividual": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ],
+                            "description": "Summary of Program History."
+                          },
+                          "attachmentProgramHistoryIndividual": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasSummaryOfProgramHistoryIndividual": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ],
+                            "description": "Summary of Program History."
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "currentBrainInjury": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfCurrentBrainInjuryIndividual": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ],
+                            "description": "Copy of Current brain Injury"
+                          },
+                          "attachmentCurrentBrainIndividual": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasCopyOfCurrentBrainInjuryIndividual": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ],
+                            "description": "Copy of Current brain Injury"
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              },
+              "trainingAndCredentialing": {
+                "type": "object",
+                "properties": {
+                  "summaryOfProviderBrain": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasSummaryOfProviderBrainIndividual": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ],
+                            "description": "Summary of Provider Brain Injury."
+                          },
+                          "attachmentSummaryIndividual": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "hasSummaryOfProviderBrainIndividual": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ],
+                            "description": "Summary of Provider Brain Injury."
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "hasWaiverServiceIndividualSupportServices": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ],
+                "description": "Individual Support Services."
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "jurisdictions": {
+        "$ref": "../../common/addenda/jurisdictions-subschema-ref.json#/Jurisdictions"
+      },
+      "generalConditions": {
+        "type": "object",
+        "properties": {
+          "meetsGeneralMedicalAssistanceCriteria": {
+            "type": "boolean",
+            "description": "Provider meets all conditions for participation as per COMAR 10.09.46"
+          },
+          "compliesWithWaiverProposalRequirements": {
+            "type": "boolean",
+            "description": "Provider services are in accordance with approved waiver proposal, regulations, and relevant laws"
+          },
+          "providesSpecifiedWaiverServices": {
+            "type": "boolean",
+            "description": "Provider delivers waiver services as specified in the participant's plan of care"
+          },
+          "maintainsServiceDocumentation": {
+            "type": "boolean",
+            "description": "Provider maintains detailed documentation of services rendered"
+          },
+          "cooperatesWithGovernmentInspections": {
+            "type": "boolean",
+            "description": "Provider agrees to cooperate with inspections by authorized governmental representatives"
+          },
+          "billsMedicaidForPreauthorizedServices": {
+            "type": "boolean",
+            "description": "Provider agrees to bill Medicaid only for preauthorized services in the waiver plan of care"
+          },
+          "roomAndBoardForBrainInjury": {
+            "type": "boolean",
+            "description": "Provider offers room and board to waiver participants with brain injury"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "ServiceOptionPT89": {
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "hasService": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "hasService": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "certificate": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "certificateNumber": {
+            "type": "string"
+          },
+          "issueDate": {
+            "$ref": "../common-pattern-ref.json#/Date"
+          },
+          "expirationDate": {
+            "$ref": "../common-pattern-ref.json#/Date"
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

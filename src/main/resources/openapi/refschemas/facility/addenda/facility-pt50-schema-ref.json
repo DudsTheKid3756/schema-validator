@@ -1,0 +1,182 @@
+{
+  "FacilityPT50": {
+    "title": "Substance Use Disorder Program - ADAA Cert Add OutPatient",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "MOUDServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "MOUDServicesProvided": {
+            "type": "boolean",
+            "description": "Indicates if the facility provides Medication for Opioid Use Disorder (MOUD) services."
+          },
+          "attachDEALicense": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "peerRecoverySupportServicesProvided": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Indicates the facility provides peer recovery support services."
+          },
+          "certifiedPeerRecoverySpecialist": {
+            "type": "array",
+            "description": "A list of certified peer recovery specialists working at the facility, detailed in a common subschema.",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "registeredPeerSupervisor": {
+            "type": "array",
+            "description": "A list of registered peer recovery supervisors at the facility, detailed in a common subschema.",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "peerRecoverySupportServicesAttestation": {
+            "type": "boolean",
+            "description": "Attestation by the facility that they meet the standards for providing peer recovery support services."
+          },
+          "allProfessionals": {
+            "type": "array",
+            "description": "Provide details of all the professionals employed or under contract (COMAR 10.63.01.05, COMAR 10.09.80.03)",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "attachWrittenPolicyRegardingCriminalHistory": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "MOUDServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "peerRecoverySupportServicesProvided": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Indicates the facility provides peer recovery support services."
+          },
+          "peerRecoverySupportServicesAttestation": {
+            "type": "boolean",
+            "description": "Attestation by the facility that they meet the standards for providing peer recovery support services."
+          },
+          "allProfessionals": {
+            "type": "array",
+            "description": "Provide details of all the professionals employed or under contract (COMAR 10.63.01.05, COMAR 10.09.80.03)",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "attachWrittenPolicyRegardingCriminalHistory": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "MOUDServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "MOUDServicesProvided": {
+            "type": "boolean",
+            "description": "Indicates if the facility provides Medication for Opioid Use Disorder (MOUD) services."
+          },
+          "attachDEALicense": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "peerRecoverySupportServicesProvided": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Indicates the facility provides peer recovery support services."
+          },
+          "peerRecoverySupportServicesAttestation": {
+            "type": "boolean",
+            "description": "Attestation by the facility that they meet the standards for providing peer recovery support services."
+          },
+          "allProfessionals": {
+            "type": "array",
+            "description": "Provide details of all the professionals employed or under contract (COMAR 10.63.01.05, COMAR 10.09.80.03)",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "attachWrittenPolicyRegardingCriminalHistory": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "MOUDServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          },
+          "peerRecoverySupportServicesProvided": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Indicates the facility provides peer recovery support services."
+          },
+          "certifiedPeerRecoverySpecialist": {
+            "type": "array",
+            "description": "A list of certified peer recovery specialists working at the facility, detailed in a common subschema.",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "registeredPeerSupervisor": {
+            "type": "array",
+            "description": "A list of registered peer recovery supervisors at the facility, detailed in a common subschema.",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "peerRecoverySupportServicesAttestation": {
+            "type": "boolean",
+            "description": "Attestation by the facility that they meet the standards for providing peer recovery support services."
+          },
+          "allProfessionals": {
+            "type": "array",
+            "description": "Provide details of all the professionals employed or under contract (COMAR 10.63.01.05, COMAR 10.09.80.03)",
+            "items": {
+              "$ref": "../../common/addenda/person-details-subschema-ref.json#/PersonDetails"
+            }
+          },
+          "attachWrittenPolicyRegardingCriminalHistory": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

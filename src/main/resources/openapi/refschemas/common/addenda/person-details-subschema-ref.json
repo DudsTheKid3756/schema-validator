@@ -1,0 +1,81 @@
+{
+  "PersonDetails": {
+    "title": "Person Details",
+    "type": "object",
+    "properties": {
+      "firstName": {
+        "type": "string"
+      },
+      "lastName": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "jobDescription": {
+        "type": "string"
+      },
+      "professionalLicense": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "preEmploymentCriminalHistory": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "criminalHistory": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "resume": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "certificate": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "additionalRequiredDocumentation": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+        }
+      },
+      "references": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+        }
+      },
+      "CJISClearance": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "policiesAndProcedures": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+        }
+      },
+      "attestationFormAllStaff": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+        }
+      },
+      "qualifiedProfessionalSupervisionPlan": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "hiringProtocol": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "trainingSchedule": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "supervisionRecord": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "mastersDegree": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "relevantTraining": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      }
+    },
+    "additionalProperties": false
+  }
+}

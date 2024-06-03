@@ -1,0 +1,42 @@
+{
+  "EmployeeDetails":{
+    "type": "object",
+    "properties": {
+      "firstName": {
+        "type": "string"
+      },
+      "lastName": {
+        "type": "string"
+      },
+      "attachments": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "attachLicenseOrCertification": {
+              "type": "array",
+              "items": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "attachCPRCard": {
+              "type": "array",
+              "items": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            },
+            "attachCJISBackgroundCheck": {
+              "type": "array",
+              "items": {
+                "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "additionalProperties": false
+
+}
+}

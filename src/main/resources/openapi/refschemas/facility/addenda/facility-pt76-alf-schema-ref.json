@@ -1,0 +1,87 @@
+{
+  "FacilityPT76-A": {
+    "title": "Community Options - ALF",
+    "type": "object",
+    "properties": {
+      "residentAgreement": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "residentRights": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "residentHouseRules": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "promotionLiterature": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+        }
+      },
+      "staff": {
+        "$ref": "../../common/addenda/staff-subschema-ref.json#/Staff"
+      },
+      "providerConditions": {
+        "type": "object",
+        "properties": {
+          "meetAllCondition": {
+            "type": "boolean"
+          },
+          "agreeToVerifyQualification": {
+            "type": "boolean"
+          },
+          "agreeToImplementReportingAndFollowUp": {
+            "type": "boolean"
+          },
+          "agreeToInspections": {
+            "type": "boolean"
+          },
+          "agreeToProvideService": {
+            "type": "boolean"
+          },
+          "agreeToMaintain": {
+            "type": "boolean"
+          },
+          "agreeNotToSuspend": {
+            "type": "boolean"
+          },
+          "agreeToSubmit": {
+            "type": "boolean"
+          },
+          "agreeToDemonstrate": {
+            "type": "boolean"
+          },
+          "agreeToVerify": {
+            "type": "boolean"
+          },
+          "agreeNotToBeMedicaidProvider": {
+            "type": "boolean"
+          },
+          "agreeToPeriodicallyIndicateCondition": {
+            "type": "boolean"
+          },
+          "revokedLicenseOrCertificate": {
+            "type": "boolean"
+          },
+          "suspendedOrRemovedFromPractice": {
+            "type": "boolean"
+          },
+          "undergoneImpositionOfSanctions": {
+            "type": "boolean"
+          },
+          "subjectToDisciplinary": {
+            "type": "boolean"
+          },
+          "citedByStateAgency": {
+            "type": "boolean"
+          },
+          "terminationMedicaidProviderAgreement": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "additionalProperties": false
+  }
+}

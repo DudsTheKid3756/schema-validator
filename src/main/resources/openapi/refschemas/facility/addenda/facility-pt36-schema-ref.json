@@ -1,0 +1,12 @@
+{
+  "FacilityPT36": {
+    "title": "Freestanding Oncology Centers",
+    "type": "object",
+    "properties": {
+      "CMSMedicareApprovalLetter": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      }
+    },
+    "additionalProperties": false
+  }
+}

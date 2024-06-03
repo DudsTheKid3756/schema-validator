@@ -1,0 +1,55 @@
+{
+  "FacilityPT03": {
+    "title": "Acute and Chronic Rehabilitation Hospitals",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "JCAHOorDNVCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "CARFCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "The facility will be rendering x-ray services or other radiology services."
+          },
+          "radiationMachineRegistrationCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "medicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "JCAHOorDNVCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "CARFCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "The facility will not be rendering x-ray services or other radiology services."
+          },
+          "medicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

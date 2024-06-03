@@ -1,0 +1,12 @@
+{
+  "FacilityPT61": {
+    "title": "Dialysis Facilities",
+    "type": "object",
+    "properties": {
+      "CMSMedicareApprovalLetter": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      }
+    },
+    "additionalProperties": false
+  }
+}

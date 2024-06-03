@@ -1,0 +1,15 @@
+{
+  "FacilityPT51": {
+    "title": "EPSDT Therapeutic Behavioral Services (TBS)",
+    "type": "object",
+    "properties": {
+      "services": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/service-option-subschema-ref.json#/ServiceOption"
+        }
+      }
+    },
+    "additionalProperties": false
+  }
+}

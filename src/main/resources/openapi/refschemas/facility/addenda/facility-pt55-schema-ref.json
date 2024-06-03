@@ -1,0 +1,35 @@
+{
+  "FacilityPT55": {
+    "title": "Intermediate Care Facility (ICF) Addiction",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "approvalLetterExists": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "BHAApprovalLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "approvalLetterExists": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

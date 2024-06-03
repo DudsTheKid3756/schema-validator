@@ -1,0 +1,21 @@
+{
+  "FacilityPTPR": {
+    "title": "Supported Employment",
+    "type": "object",
+    "properties": {
+      "allProfessionals": {
+        "type": "array",
+        "items": {
+          "$ref": "../../common/addenda/professional-details-subschema-ref.json#/ProfessionalDetail"
+        }
+      },
+      "criminalHistoryPolicy": {
+        "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+      },
+      "onSiteRehabilitationSpecialist": {
+        "type": "boolean"
+      }
+    },
+    "additionalProperties": false
+  }
+}

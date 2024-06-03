@@ -1,0 +1,64 @@
+{
+  "ProviderParticipation": {
+    "type": "object",
+    "description": "Lists the compliance and regulatory conditions for the provider.",
+    "properties": {
+      "meetsAllConditions": {
+        "type": "boolean"
+      },
+      "agreeToVerifyQualifications": {
+        "type": "boolean"
+      },
+      "agreeReportAndFollowUPIncidents": {
+        "type": "boolean"
+      },
+      "agreeToCooperateWithRequiredInspections": {
+        "type": "boolean"
+      },
+      "agreeToProvideServices": {
+        "type": "boolean"
+      },
+      "agreeToMaintainDocuments": {
+        "type": "boolean"
+      },
+      "agreeNotToSuspend": {
+        "type": "boolean"
+      },
+      "agreeToSubmitTransitionPlan": {
+        "type": "boolean"
+      },
+      "agreeToDemonstrateSubstantialCompliance": {
+        "type": "boolean"
+      },
+      "agreeToVerifyMedicaidEligibility": {
+        "type": "boolean"
+      },
+      "agreeNotBeMedicaidProvider": {
+        "type": "boolean"
+      },
+      "ifTheProviderRendersHealthRelatedServices": {
+        "type": "boolean"
+      },
+      "hadLicenseOrCertificateSuspendedOrRevoked": {
+        "type": "boolean"
+      },
+      "beenSuspendedOrRemovalFromPractice": {
+        "type": "boolean"
+      },
+      "undergoneImposition": {
+        "type": "boolean"
+      },
+      "beenSubjectToDisciplinaryAction": {
+        "type": "boolean"
+      },
+      "beenCitedByStateAgency": {
+        "type": "boolean"
+      },
+      "experiencedTerminationOfMedicaidProviderAgreement": {
+        "type": "boolean"
+      }
+
+    },
+    "additionalProperties": false
+  }
+}

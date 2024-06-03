@@ -1,0 +1,124 @@
+{
+  "FacilityPT07": {
+    "title": "Special Other Chronic Hospital",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "NIAHOCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderPhysicalRehabilitationServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Indicates that physical rehabilitation services will be provided."
+          },
+          "CARFCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Indicates that radiology services will be provided."
+          },
+          "radiationMachineRegistrationCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "medicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "NIAHOCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderPhysicalRehabilitationServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Indicates that physical rehabilitation services will not be provided."
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Indicates that radiology services will not be provided."
+          },
+          "medicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "NIAHOCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderPhysicalRehabilitationServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Indicates that physical rehabilitation services will be provided."
+          },
+          "CARFCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Indicates that radiology services will not be provided."
+          },
+          "medicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "NIAHOCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderPhysicalRehabilitationServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Indicates that physical rehabilitation services will not be provided."
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Indicates that radiology services will be provided."
+          },
+          "radiationMachineRegistrationCertification": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "medicaidReimbursementRates": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

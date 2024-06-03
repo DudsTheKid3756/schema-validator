@@ -1,0 +1,50 @@
+{
+  "Counters": {
+    "type": "object",
+    "properties": {
+      "sections": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "sectionName": {
+              "type": "string"
+            },
+            "subSections": {
+              "type": "array",
+              "items": {
+                "$ref": "#/Subsection"
+              }
+            },
+            "totalFilledCount": {
+              "type": "integer"
+            },
+            "totalRequiredFields": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "additionalProperties": false
+  },
+  "Subsection": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "notificationFlag": {
+        "type": "string"
+      },
+      "totalFilledFields": {
+        "type": "integer"
+      },
+      "totalRequiredFields": {
+        "type": "integer"
+      }
+    },
+    "additionalProperties": false
+  }
+}

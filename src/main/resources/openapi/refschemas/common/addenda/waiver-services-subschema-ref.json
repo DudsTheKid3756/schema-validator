@@ -1,0 +1,1640 @@
+{
+  "WaiverServices": {
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "adultLifePlanning": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasAdultLifePlanning": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "individualPractitioner": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "agency": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  },
+                  "staffRequirements": {
+                    "type": "object",
+                    "properties": {
+                      "individualWithMastersDegreeInHS": {
+                        "type": "boolean"
+                      },
+                      "threeYearsFTExperience": {
+                        "type": "boolean"
+                      },
+                      "statementThatProofQualifications": {
+                        "type": "boolean"
+                      },
+                      "requirementsForContractEmployee": {
+                        "type": "boolean"
+                      },
+                      "planToHireQualifiedContractorToProvideALPService": {
+                        "type": "boolean"
+                      },
+                      "contractors": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "firstName": {
+                              "type": "string"
+                            },
+                            "lastName": {
+                              "type": "string"
+                            },
+                            "attachResume": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            },
+                            "attachMastersDegree": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            },
+                            "attachRelevantTraining": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "attachThreeReferences": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachAttestationFromCJIS": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachJobDescription": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachDocumentationPlan": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachPoliciesAndProcedures": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachAdultLifePlanningTreatmentPlan": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachProofOfLiabilityInsurance": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachLetterOfIntroductionToFamily": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "businessPlanDescription": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachMSDEProviderApplicationForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachGeneralConditionForProviderParticipationForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachContactLogForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "faceToFaceMSDEInterview": {
+                        "type": "boolean",
+                        "enum": [
+                          true
+                        ]
+                      },
+                      "dateOfInterview": {
+                        "$ref": "../../common/common-pattern-ref.json#/Date"
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasAdultLifePlanning": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "individualPractitioner": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  },
+                  "agency": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "agencyRequirements": {
+                    "type": "object",
+                    "properties": {
+                      "isYourBusinessLicensedInMD": {
+                        "type": "boolean"
+                      },
+                      "staffWithMastersDegreeInHSAndFiveYearsOfFTExperience": {
+                        "type": "boolean"
+                      },
+                      "planToHireQualifiedContractorToProvideALPService": {
+                        "type": "boolean"
+                      },
+                      "attachAgencyContractForALP": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachThreeReferences": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachAttestationFromCJIS": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachJobDescription": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachDocumentationPlan": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachPoliciesAndProcedures": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachAdultLifePlanningTreatmentPlan": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachProofOfLiabilityInsurance": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachLetterOfIntroductionToFamily": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "businessPlanDescription": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachMSDEProviderApplicationForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachContactLogForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "faceToFaceMSDEInterview": {
+                        "type": "boolean",
+                        "enum": [
+                          true
+                        ]
+                      },
+                      "dateOfInterview": {
+                        "$ref": "../../common/common-pattern-ref.json#/Date"
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasAdultLifePlanning": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "individualPractitioner": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "agency": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  },
+                  "staffRequirements": {
+                    "type": "object",
+                    "properties": {
+                      "individualWithMastersDegreeInHS": {
+                        "type": "boolean"
+                      },
+                      "threeYearsFTExperience": {
+                        "type": "boolean"
+                      },
+                      "statementThatProofQualifications": {
+                        "type": "boolean"
+                      },
+                      "requirementsForContractEmployee": {
+                        "type": "boolean"
+                      },
+                      "planToHireQualifiedContractorToProvideALPService": {
+                        "type": "boolean"
+                      },
+                      "contractors": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "firstName": {
+                              "type": "string"
+                            },
+                            "lastName": {
+                              "type": "string"
+                            },
+                            "attachments": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "attachResume": {
+                                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                                  },
+                                  "attachMastersDegree": {
+                                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                                  },
+                                  "attachRelevantTraining": {
+                                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                                  }
+                                },
+                                "additionalProperties": false
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "attachThreeReferences": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachAttestationFromCJIS": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachJobDescription": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachDocumentationPlan": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachPoliciesAndProcedures": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachAdultLifePlanningTreatmentPlan": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachProofOfLiabilityInsurance": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachLetterOfIntroductionToFamily": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "businessPlanDescription": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachMSDEProviderApplicationForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachGeneralConditionForProviderParticipationForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachContactLogForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "faceToFaceMSDEInterview": {
+                        "type": "boolean",
+                        "enum": [
+                          false
+                        ]
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasAdultLifePlanning": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "individualPractitioner": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  },
+                  "agency": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "agencyRequirements": {
+                    "type": "object",
+                    "properties": {
+                      "isYourBusinessLicensedInMD": {
+                        "type": "boolean"
+                      },
+                      "staffWithMastersDegreeInHSAndFiveYearsOfFTExperience": {
+                        "type": "boolean"
+                      },
+                      "planToHireQualifiedContractorToProvideALPService": {
+                        "type": "boolean"
+                      },
+                      "attachAgencyContractForALP": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachThreeReferences": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachAttestationFromCJIS": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachJobDescription": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachDocumentationPlan": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachPoliciesAndProcedures": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachAdultLifePlanningTreatmentPlan": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachProofOfLiabilityInsurance": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachLetterOfIntroductionToFamily": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "businessPlanDescription": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachMSDEProviderApplicationForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachContactLogForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "faceToFaceMSDEInterview": {
+                        "type": "boolean",
+                        "enum": [
+                          false
+                        ]
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasAdultLifePlanning": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "familyConsultation": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasFamilyConsultation": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "providesFCServices": {
+                    "type": "boolean"
+                  },
+                  "FCPersonalDetails": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "firstName": {
+                          "type": "string"
+                        },
+                        "lastName": {
+                          "type": "string"
+                        },
+                        "attachResume": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        },
+                        "attachAdditionalRequiredDocumentations": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "providerRequirements": {
+                    "type": "object",
+                    "properties": {
+                      "attachPoliciesAndProcedures": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachBusinessPlanDescription": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachAttestationFromCJIS": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachFamilyConsultationPlan": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachProofOfLiabilityInsurance": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachLetterToFamily": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachMSDEProviderApplicationForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachGeneralConditionForProviderParticipationForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachAgencyOwnerResumeTranscriptAndDiplomaOrCertificate": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachAgencyOwnerThreeProfessionalReferences": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachContactLogForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasFamilyConsultation": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "respiteCare": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasRespiteCare": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "supervisors": {
+                    "type": "object",
+                    "properties": {
+                      "planToHireQualifiedContractorSupervisorServices": {
+                        "type": "boolean"
+                      },
+                      "respiteCarePersonalDetails": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "firstName": {
+                              "type": "string"
+                            },
+                            "lastName": {
+                              "type": "string"
+                            },
+                            "attachResume": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            },
+                            "attachAdditionalRequiredDocumentations": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "respiteCareWorkers": {
+                    "type": "object",
+                    "properties": {
+                      "planToHireQualifiedContractorRCSupervision": {
+                        "type": "boolean"
+                      },
+                      "RCSupervisionPersonalDetails": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "firstName": {
+                              "type": "string"
+                            },
+                            "lastName": {
+                              "type": "string"
+                            },
+                            "jobDescription": {
+                              "type": "string"
+                            },
+                            "attachResume": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            },
+                            "attachAdditionalRequiredDocumentation": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            },
+                            "attachPlanForSupervisionByQualifiedProfessional": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            },
+                            "attachFormsUsedForReferenceCheck": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            },
+                            "attachAttestationOfCJISClearance": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "providerRequirements": {
+                    "type": "object",
+                    "properties": {
+                      "attachWrittenPoliciesAndProcedures": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachProofOfLiabilityInsurance": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachProofOfDishonestyBond": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachLetterOfIntroductionToFamily": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachMSDEProviderApplicationForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachGeneralConditionForProviderParticipationForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachBusinessPlan": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachContactLogForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachAttestationFromCJIS": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasRespiteCare": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "environmentalAccessibilityAdaptations": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasEnvironmentalAccessibilityAdaptations": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "stateLicenseOrCertificate": {
+                    "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                  },
+                  "attachProofOfLiabilityInsurance": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "attachProofOfBond": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "attachMSDEProviderApplicationForm": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "attachLetterOfIntroductionToFamily": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "attachGeneralConditionForProviderParticipationForm": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  },
+                  "attachThreeProfessionalReferences": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                    }
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasEnvironmentalAccessibilityAdaptations": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "intensiveIndividualSupportServices": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasIntensiveIndividualSupportServices": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "programDirector": {
+                    "type": "object",
+                    "properties": {
+                      "planToHireQualifiedFullTimeIISSProgramDirector": {
+                        "type": "boolean"
+                      },
+                      "personalDetails": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "firstName": {
+                              "type": "string"
+                            },
+                            "lastName": {
+                              "type": "string"
+                            },
+                            "attachResume": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            },
+                            "attachAdditionalRequiredDocumentations": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "supervisorOfDirectCareWorkers": {
+                    "type": "object",
+                    "properties": {
+                      "planToHireSupervisorForDirectCareWorkers": {
+                        "type": "boolean"
+                      },
+                      "personalDetails": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "firstName": {
+                              "type": "string"
+                            },
+                            "lastName": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "attachResume": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            },
+                            "attachAdditionalRequiredDocumentations": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "directCareWorkers": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "jobDescription": {
+                          "type": "string"
+                        },
+                        "attachPlanForSupervisionByQualifiedProfessional": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        },
+                        "attachFormsUsedForReferenceCheck": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        },
+                        "attachPoliciesAndProcedure": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "onCallProfessionals": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "firstName": {
+                          "type": "string"
+                        },
+                        "lastName": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        },
+                        "attachResume": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        },
+                        "attachAdditionalRequiredDocumentations": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "providerRequirements": {
+                    "type": "object",
+                    "properties": {
+                      "attachPoliciesAndProcedures": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachBusinessPlanDescription": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachAttestationOfCJISClearance": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachIISSTreatmentPlan": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachProofOfLiabilityInsurance": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachLetterOfIntroductionToFamily": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachCrisisInterventionOrPlan": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachMSDEProviderApplicationForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachGeneralConditionForProviderParticipationForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachAgencyOwnerResumeTranscriptAndDiplomaOrCertificate": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachAgencyOwnerThreeProfessionalReferences": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachProofOfAtLeastThreeYearsExperience": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachContactLogForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasIntensiveIndividualSupportServices": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "therapeuticIntegration": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasTherapeuticIntegration": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "programDirector": {
+                    "type": "object",
+                    "properties": {
+                      "planToHireQualifiedTIProgramDirector": {
+                        "type": "boolean"
+                      },
+                      "personalDetails": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "firstName": {
+                              "type": "string"
+                            },
+                            "lastName": {
+                              "type": "string"
+                            },
+                            "attachResume": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            },
+                            "attachAdditionalRequiredDocumentations": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "onSiteSupervisor": {
+                    "type": "object",
+                    "properties": {
+                      "planToHireQualifiedTIOnSiteSupervisor": {
+                        "type": "boolean"
+                      },
+                      "personalDetails": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "firstName": {
+                              "type": "string"
+                            },
+                            "lastName": {
+                              "type": "string"
+                            },
+                            "attachResume": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            },
+                            "attachAdditionalRequiredDocumentations": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "directCareWorkers": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "firstName": {
+                          "type": "string"
+                        },
+                        "lastName": {
+                          "type": "string"
+                        },
+                        "jobDescription": {
+                          "type": "string"
+                        },
+                        "attachResume": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        },
+                        "attachAdditionalRequiredDocumentations": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        },
+                        "attachFormsUsedForReferenceCheck": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        },
+                        "attachPlanAttestationForm": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        },
+                        "attachPlanForSupervision": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "onCallProfessional": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "firstName": {
+                          "type": "string"
+                        },
+                        "lastName": {
+                          "type": "string"
+                        },
+                        "attachResume": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        },
+                        "attachAdditionalRequiredDocumentations": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "providerRequirements": {
+                    "type": "object",
+                    "properties": {
+                      "attachWrittenPoliciesAndProcedures": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachBusinessPlanDescription": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachTITreatmentPlan": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachProofOfLiabilityInsurance": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachLetterOfIntroductionToFamily": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachCrisisInterventionOrPlan": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachFacilityCompliance": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachMSDEProviderApplicationForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachGeneralConditionForProviderParticipationForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachProofOfAtLeastThreeYearsExperience": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachContactLogForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasTherapeuticIntegration": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "residentialHabilitation": {
+            "type": "object",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "hasResidentialHabilitation": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "programDirector": {
+                    "type": "object",
+                    "properties": {
+                      "planToHireQualifiedResidentialHabilitationProgramDirector": {
+                        "type": "boolean"
+                      },
+                      "personalDetails": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "firstName": {
+                              "type": "string"
+                            },
+                            "lastName": {
+                              "type": "string"
+                            },
+                            "jobDescription": {
+                              "type": "string"
+                            },
+                            "attachSpecialEducationSupervisorCertificate": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            },
+                            "attachSpecialEducationPrincipalCertificate": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            },
+                            "attachSpecialEducationEducatorCertificate": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            },
+                            "attachResume": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            },
+                            "attachReferences": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "onSiteSupervisor": {
+                    "type": "object",
+                    "properties": {
+                      "planToHireQualifiedResidentialHabilitationOnSiteSupervisor": {
+                        "type": "boolean"
+                      },
+                      "personalDetails": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "firstName": {
+                              "type": "string"
+                            },
+                            "lastName": {
+                              "type": "string"
+                            },
+                            "attachResume": {
+                              "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "directCareWorkers": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "firstName": {
+                          "type": "string"
+                        },
+                        "lastName": {
+                          "type": "string"
+                        },
+                        "jobDescription": {
+                          "type": "string"
+                        },
+                        "attachResume": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        },
+                        "attachHiringProtocol": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        },
+                        "attachTrainingSchedule": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        },
+                        "attachSupervisorRecord": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "onCallProfessional": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "firstName": {
+                          "type": "string"
+                        },
+                        "lastName": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        },
+                        "attachResume": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "providerRequirements": {
+                    "type": "object",
+                    "properties": {
+                      "attachMedicaidProviderApplication": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachCOMAR102208And102202": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachProofOfLiabilityInsurance": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachMSDEProviderApplicationForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachGeneralConditionForProviderParticipationForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachBusinessPlan": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachProofOfFacilityCompliance": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachLetterOfIntroductionToFamily": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachProofOfAtLeastThreeYearsExperience": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachResidentChildCareLicense": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachResidentHabilitationTreatmentPlan": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      },
+                      "attachContactLogForm": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                        }
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "programRequirements": {
+                    "type": "object",
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "policiesAndProcedures": {
+                            "type": "boolean"
+                          },
+                          "medicalServicesPoliciesAndProcedures": {
+                            "type": "boolean"
+                          },
+                          "approvals": {
+                            "type": "boolean",
+                            "enum": [
+                              true
+                            ]
+                          },
+                          "attachDocument": {
+                            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+                          },
+                          "roundTheClockStaffing": {
+                            "type": "boolean"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "policiesAndProcedures": {
+                            "type": "boolean"
+                          },
+                          "medicalServicesPoliceAndProcedures": {
+                            "type": "boolean"
+                          },
+                          "approvals": {
+                            "type": "boolean",
+                            "enum": [
+                              false
+                            ]
+                          },
+                          "roundTheClockStaffing": {
+                            "type": "boolean"
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "hasResidentialHabilitation": {
+                    "type": "boolean",
+                    "enum": [
+                      false
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "FacilityPT39": {
+    "title": "Ambulatory Surgery Centers (ASC)",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "CMSMedicareApprovalLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ],
+            "description": "Indicates that the facility will be rendering x-ray services or other radiology services."
+          },
+          "radiationMachineFacilityRegistration": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "abortionServices": {
+            "type": "boolean",
+            "description": "Indicates whether abortion services are rendered by the facility."
+          },
+          "vasectomyServices": {
+            "type": "boolean",
+            "description": "Indicates whether vasectomy services are rendered by the facility."
+          },
+          "labServices": {
+            "type": "boolean",
+            "description": "Indicates whether lab services are rendered by the facility."
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "CMSMedicareApprovalLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          },
+          "willRenderXRayOrRadiologyServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ],
+            "description": "Indicates that the facility will not be rendering x-ray services or other radiology services."
+          },
+          "abortionServices": {
+            "type": "boolean",
+            "description": "Indicates whether abortion services are rendered by the facility."
+          },
+          "vasectomyServices": {
+            "type": "boolean",
+            "description": "Indicates whether vasectomy services are rendered by the facility."
+          },
+          "labServices": {
+            "type": "boolean",
+            "description": "Indicates whether lab services are rendered by the facility."
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

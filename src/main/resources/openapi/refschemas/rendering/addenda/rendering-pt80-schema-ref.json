@@ -1,0 +1,33 @@
+{
+  "RenderingPT80": {
+    "title": "Physician Assistant (Rendering)",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "providesHealthyStepsServices": {
+            "enum": [
+              true
+            ]
+          },
+          "healthyStepsActiveSiteConfirmationLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "providesHealthyStepsServices": {
+            "enum": [
+              false
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "RenderingPT23": {
+    "title": "Nurse Practitioners (Rendering)",
+    "type": "object",
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "affiliatedGroupSiteProvideHealthStepsServices": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "attachHealthyStepsActiveSiteConfirmationLetter": {
+            "$ref": "../../common/common-schema-ref.json#/FileAttachment"
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "affiliatedGroupSiteProvideHealthStepsServices": {
+            "type": "boolean",
+            "enum": [
+              false
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  }
+}
